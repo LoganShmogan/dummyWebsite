@@ -25,7 +25,6 @@ export default function Navbar() {
           <Link href="#contact" className="hover:text-orange-600">Contact</Link>
           <Link href="#enrolment" className="hover:text-orange-600">Enrolment</Link>
           <Link href="#gallery" className="hover:text-orange-600">Gallery</Link>
-          <Link href="#blog" className="hover:text-orange-600">Blog</Link>
         </div>
         <div className="flex items-center gap-2">
           <Button className="bg-orange-700 hover:bg-orange-800 text-white">Enrol Now</Button>

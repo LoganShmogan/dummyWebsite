@@ -17,7 +17,6 @@ export default function Footer() {
             <li><a href="#contact">Contact</a></li>
             <li><a href="#enrolment">Enrolment</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#blog">Blog</a></li>
           </ul>
         </div>
 
