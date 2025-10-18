@@ -5,17 +5,28 @@ import Hero from '@/app/components/Hero';
 export default function Home() {
   return (
     <>
-      <Hero />
-
-      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-orange-900">About Us</h2>
-        <p className="mt-4 text-gray-600">
-          We believe every child deserves a place where they can feel safe,
-          inspired, and loved. Our dedicated educators focus on nurturing
-          confidence and curiosity in every learner.
-        </p>
+      <section className="max-w-6xl mx-auto px-6 py-10 border-t">
+        <h2 className="text-3xl font-bold text-orange-900">Contact Us</h2>
+      <ul className="w-96 text-surface dark:text-white">
+        <li
+          className="w-full border-b-2 border-neutral-100 py-4 dark:border-white/10">
+          An item
+        </li>
+        <li
+          className="w-full border-b-2 border-neutral-100 py-4 dark:border-white/10">
+          A second item
+        </li>
+        <li
+          className="w-full border-b-2 border-neutral-100 py-4 dark:border-white/10">
+          A third item
+        </li>
+        <li
+          className="w-full border-b-2 border-neutral-100 py-4 dark:border-white/10">
+          A fourth item
+        </li>
+        <li className="w-full py-4">And a fifth one</li>
+      </ul>
       </section>
-
     </>
   );
 }
