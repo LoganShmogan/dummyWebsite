@@ -1,0 +1,173 @@
+.container {
+  min-height: 100vh;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 5rem 2rem;
+  background: #f8fafc;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #f59e0b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cardNumber {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background: #f59e0b;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.valueCard h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.valueCard p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctaCard {
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ctaCard:hover {
+  transform: translateY(-5px);
+}
+
+.enrollCard {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.aboutCard {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.ctaCard h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ctaCard p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  background: white;
+  color: #1e293b;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ctaGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .valuesSection,
+  .ctaSection {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .ctaCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaCard h3 {
+    font-size: 1.7rem;
+  }
+}
