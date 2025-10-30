@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,13 +10,13 @@ export default function Footer() {
           <div className={`${styles.ctaCard} ${styles.enrollCard}`}>
             <h3>Enroll Now</h3>
             <p>Join Happy and give your child the best start in life</p>
-            <button className={styles.ctaButton}>Start Enrollment</button>
+            <Link className={styles.ctaButton} href="/enrolment">Start Enrolment</Link>
           </div>
           
           <div className={`${styles.ctaCard} ${styles.aboutCard}`}>
             <h3>About Us</h3>
             <p>Learn more about our story, our team, and what makes Happy Horizons special</p>
-            <button className={styles.ctaButton}>Our Story</button>
+            <Link className={styles.ctaButton} href="/about">Our Story</Link>
           </div>
         </div>
       </div>
