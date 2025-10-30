@@ -1,0 +1,144 @@
+.footer {
+  background: #1e293b;
+  color: white;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctaCard {
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.ctaCard:hover {
+  transform: translateY(-5px);
+}
+
+.enrollCard {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.aboutCard {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.ctaCard h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ctaCard p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  background: white;
+  color: #1e293b;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Content */
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerSection h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #f59e0b;
+}
+
+.footerSection p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerSection ul li a:hover {
+  color: #f59e0b;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid #334155;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ctaGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ctaSection {
+    padding: 3rem 1rem;
+  }
+  
+  .ctaCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaCard h3 {
+    font-size: 1.7rem;
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
