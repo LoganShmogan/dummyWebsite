@@ -1,6 +1,7 @@
 import styles from './page.module.css';
+import Link from 'next/link';
 
-export default function Home() {
+export default function About() {
   const values = [
     {
       title: "Nurturing Care",

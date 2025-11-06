@@ -1,93 +1,102 @@
 .footer {
-  background: #1e293b;
-  color: white;
+  background-color: var(--dark-brown);
+  color: var(--dark-brown);
+  margin-top: auto;
 }
 
 /* CTA Section */
 .ctaSection {
+  background: linear-gradient(135deg, var(--sunshine-yellow) 0%, var(--apricot-glow) 100%);
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .ctaGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .ctaCard {
-  padding: 3rem 2rem;
+  background: var(--buttercream);
+  padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
-  color: white;
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 32px rgba(61, 48, 40, 0.1);
+  border: 2px solid var(--warm-sand);
+  transition: all 0.3s ease;
 }
 
 .ctaCard:hover {
-  transform: translateY(-5px);
-}
-
-.enrollCard {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-}
-
-.aboutCard {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(61, 48, 40, 0.15);
+  border-color: var(--sunflower-gold);
 }
 
 .ctaCard h3 {
-  font-size: 2rem;
+  color: var(--dark-brown);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .ctaCard p {
-  font-size: 1.1rem;
+  color: var(--warm-gray);
   margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .ctaButton {
-  background: white;
-  color: #1e293b;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-size: 1.1rem;
+  display: inline-block;
+  background-color: var(--coral-orange);
+  color: var(--dark-brown);
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .ctaButton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--terracotta);
+  color: var(--buttercream);
+  transform: translateY(-2px);
+}
+
+/* Specific card variations */
+.enrollCard {
+  border-top: 4px solid var(--sunshine-yellow);
+}
+
+.aboutCard {
+  border-top: 4px solid var(--coral-orange);
 }
 
 /* Footer Content */
 .footerContent {
+  background-color: var(--dark-brown);
+  color: var(--buttercream);
+  padding: 3rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footerSection h4 {
-  font-size: 1.3rem;
+  color: var(--sunshine-yellow);
+  font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #f59e0b;
+  font-weight: 600;
 }
 
 .footerSection p {
-  color: #cbd5e1;
-  line-height: 1.6;
   margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--warm-sand);
 }
 
 .footerSection ul {
@@ -100,30 +109,32 @@
 }
 
 .footerSection ul li a {
-  color: #cbd5e1;
+  color: var(--warm-sand);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footerSection ul li a:hover {
-  color: #f59e0b;
+  color: var(--sunshine-yellow);
 }
 
 /* Footer Bottom */
 .footerBottom {
-  border-top: 1px solid #334155;
+  background-color: var(--dark-brown);
+  border-top: 1px solid var(--warm-gray);
   padding: 1.5rem 2rem;
   text-align: center;
-  color: #94a3b8;
+}
+
+.footerBottom p {
+  color: var(--warm-sand);
+  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .ctaGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
   .ctaSection {
     padding: 3rem 1rem;
   }
@@ -132,13 +143,27 @@
     padding: 2rem 1.5rem;
   }
   
-  .ctaCard h3 {
-    font-size: 1.7rem;
+  .footerContent {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .ctaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaSection {
+    padding: 2rem 1rem;
+  }
+  
+  .ctaCard {
+    padding: 1.5rem 1rem;
   }
   
   .footerContent {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 }

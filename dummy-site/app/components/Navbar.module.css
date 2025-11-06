@@ -1,0 +1,132 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--cream-white);
+  box-shadow: 0 2px 20px rgba(61, 48, 40, 0.1);
+  z-index: 50;
+  border-bottom: 1px solid var(--warm-sand);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--sunflower-gold);
+}
+
+.navLinks {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: var(--dark-brown);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--coral-orange);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--coral-orange);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaButton {
+  background-color: var(--sunshine-yellow) !important;
+  color: var(--dark-brown) !important;
+  border: 2px solid transparent !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.ctaButton:hover {
+  background-color: var(--sunflower-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
+}
+
+/* Mobile menu styles */
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--dark-brown);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--cream-white);
+  border-top: 1px solid var(--warm-sand);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileNavLink {
+  color: var(--dark-brown);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  background-color: var(--buttercream);
+  color: var(--coral-orange);
+}
