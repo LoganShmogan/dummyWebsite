@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: var(--cream-white);
+  background-color: rgb(255, 241, 201);
   box-shadow: 0 2px 20px rgba(61, 48, 40, 0.1);
   z-index: 50;
   border-bottom: 1px solid var(--warm-sand);
@@ -19,13 +19,13 @@
 .logo {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--dark-brown);
+  color: #DD7D1E;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: var(--sunflower-gold);
+  color: #DD7D1E;
 }
 
 .navLinks {
@@ -40,7 +40,7 @@
 }
 
 .navLink {
-  color: var(--dark-brown);
+  color: #DD7D1E;
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
@@ -49,7 +49,7 @@
 }
 
 .navLink:hover {
-  color: var(--coral-orange);
+  color: #DD7D1E;
 }
 
 .navLink::after {
@@ -75,7 +75,7 @@
 
 .ctaButton {
   background-color: var(--sunshine-yellow) !important;
-  color: var(--dark-brown) !important;
+  color: #DD7D1E !important;
   border: 2px solid transparent !important;
   font-weight: 600 !important;
   padding: 0.75rem 1.5rem !important;
@@ -93,7 +93,7 @@
   display: block;
   background: none;
   border: none;
-  color: var(--dark-brown);
+  color: #DD7D1E;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@
 }
 
 .mobileNavLink {
-  color: var(--dark-brown);
+  color: #DD7D1E;
   text-decoration: none;
   font-weight: 500;
   padding: 0.75rem 1rem;
@@ -128,5 +128,5 @@
 
 .mobileNavLink:hover {
   background-color: var(--buttercream);
-  color: var(--coral-orange);
+  color: #DD7D1E;
 }
