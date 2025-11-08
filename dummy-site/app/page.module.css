@@ -17,8 +17,8 @@
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(61, 48, 40, 0.1);
-  border: 2px solid;
   transition: all 0.3s ease;
+  background-color: #FADD8F;
 }
 
 .ctaCard:hover {
@@ -45,6 +45,7 @@
   font-weight: 600;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  background-color: var(--button-color);
 }
 
 .ctaButton:hover {
@@ -75,4 +76,71 @@
   .ctaCard {
     padding: 1.5rem 1rem;
   }
+}
+
+.heroSection {
+  position: relative;
+  height: 30vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 40px 100px;
+  border-radius: 15px;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.companyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.companyName {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.missionStatement {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .companyName {
+    font-size: 2.5rem;
+  }
+  
+  .missionStatement {
+    font-size: 1.2rem;
+  }
+  
+  .companyHeader {
+    flex-direction: column;
+  }
+  
 }

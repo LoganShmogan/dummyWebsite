@@ -49,6 +49,7 @@
   /* 30% - Secondary color */
   --cream-white: #FFFAF2;
   /* 10% - Accent color */
+  --button-color: #F0C051;
 
   /* Typography Colors */
   --heading-color: var(--cream-white);
