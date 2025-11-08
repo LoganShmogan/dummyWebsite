@@ -11,7 +11,7 @@ export default function Hero() {
           fill
           style={{
             objectFit: 'cover',
-            filter: 'grayscale(20%) brightness(40%)'
+            filter: 'grayscale(20%) brightness(60%)'
           }}
           priority  
         />

@@ -4,23 +4,6 @@ import styles from './Footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      {/* CTA Cards Section */}
-      <div className={styles.ctaSection}>
-        <div className={styles.ctaGrid}>
-          <div className={`${styles.ctaCard} ${styles.enrollCard}`}>
-            <h3>Enroll Now</h3>
-            <p>Join Happy and give your child the best start in life</p>
-            <Link className={styles.ctaButton} href="/enrolment">Start Enrolment</Link>
-          </div>
-          
-          <div className={`${styles.ctaCard} ${styles.aboutCard}`}>
-            <h3>About Us</h3>
-            <p>Learn more about our story, our team, and what makes Happy Horizons special</p>
-            <Link className={styles.ctaButton} href="/about">Our Story</Link>
-          </div>
-        </div>
-      </div>
-
       {/* Regular Footer Content */}
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>

@@ -43,87 +43,23 @@
 
 :root {
   /* Custom Colors */
-  --big-yellow: #f2b705;
+  --big-yellow: #F2CB56;
   /* 60% - Primary color */
   --big-orange: #f29422;
   /* 30% - Secondary color */
   --cream-white: #FFFAF2;
   /* 10% - Accent color */
 
-  /* Derived Colors */
-  --dark-brown: #1a0f00;
-  /* Dark brown for text contrast on yellow */
-  --medium-brown: #5c3d00;
-  /* Medium brown for muted text */
-  --light-yellow: color-mix(in srgb, var(--big-yellow) 80%, white 20%);
-  /* Lightened yellow for muted backgrounds */
-  --light-orange: color-mix(in srgb, var(--big-orange) 70%, white 30%);
-  /* Light orange for chart variations */
-  --dark-yellow: color-mix(in srgb, var(--big-yellow) 80%, black 20%);
-  /* Darker yellow for chart variations */
-  --yellow-orange-blend: color-mix(in srgb, var(--big-yellow) 70%, var(--big-orange) 30%);
-  /* Blend for borders */
-  --yellow-orange-light-blend: color-mix(in srgb, var(--big-yellow) 80%, var(--big-orange) 20%);
-  /* Light blend for sidebar borders */
-
   /* Typography Colors */
-  --heading-color: var(--dark-brown);
+  --heading-color: var(--cream-white);
   /* Color for all headings (h1, h2, h3, h4, h5, h6) */
-  --text-color: var(--medium-brown);
+  --text-color: var(--cream-white);
   /* Color for all body text (p, li, span, etc) */
-  --link-color: var(--big-orange);
+  --link-color: var(--cream-white);
   /* Color for links */
-  --link-hover-color: color-mix(in srgb, var(--big-orange) 80%, black 20%);
-  /* Darker orange for hover states */
 
-  /* Semantic Tokens with 60/30/10 Rule */
   --radius: 0.625rem;
-  --background: var(--big-yellow);
-  /* 60% - Main background */
-  --foreground: var(--heading-color);
-  --card: var(--cream-white);
-  /* 10% - Cards pop with white */
-  --card-foreground: var(--heading-color);
-  --popover: var(--cream-white);
-  /* 10% */
-  --popover-foreground: var(--heading-color);
-  --primary: var(--big-orange);
-  /* 30% - Primary actions */
-  --primary-foreground: var(--dark-brown);
-  --secondary: var(--big-yellow);
-  /* 60% - Secondary elements */
-  --secondary-foreground: var(--dark-brown);
-  --muted: var(--light-yellow);
-  --muted-foreground: var(--text-color);
-  --accent: var(--big-orange);
-  /* 30% - Accent elements */
-  --accent-foreground: var(--dark-brown);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: var(--yellow-orange-blend);
-  --input: var(--cream-white);
-  /* 10% - Input backgrounds */
-  --ring: var(--big-orange);
-  /* 30% - Focus rings */
-  --chart-1: var(--big-orange);
-  /* 30% */
-  --chart-2: var(--big-yellow);
-  /* 60% */
-  --chart-3: var(--light-orange);
-  --chart-4: var(--dark-yellow);
-  --chart-5: var(--big-orange);
-  /* 30% */
-  --sidebar: var(--big-yellow);
-  /* 60% - Sidebar uses main color */
-  --sidebar-foreground: var(--heading-color);
-  --sidebar-primary: var(--big-orange);
-  /* 30% - Primary in sidebar */
-  --sidebar-primary-foreground: var(--dark-brown);
-  --sidebar-accent: var(--cream-white);
-  /* 10% - Accent in sidebar */
-  --sidebar-accent-foreground: var(--dark-brown);
-  --sidebar-border: var(--yellow-orange-light-blend);
-  --sidebar-ring: var(--big-orange);
-  /* 30% */
+  --background: var(--big-yellow);  /* 60% - Main background */
 }
 
 /* Global Typography Styles */
