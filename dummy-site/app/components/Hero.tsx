@@ -17,9 +17,6 @@ export default function Hero() {
         />
       </div>
       <div className={styles.heroContent}>
-        <div className={styles.companyHeader}>
-          <h1 className={styles.companyName}>Happy Horizons</h1>
-        </div>
         <p className={styles.missionStatement}>
             Nurturing young minds with engaging, inclusive education that sparks curiosity, creativity, and confidence for bright futures.
         </p>

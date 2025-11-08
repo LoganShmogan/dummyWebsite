@@ -1,10 +1,10 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: rgb(255, 241, 201);
   box-shadow: 0 2px 20px rgba(61, 48, 40, 0.1);
   z-index: 50;
   border-bottom: 1px solid var(--warm-sand);
+  color: black;
 }
 
 .nav {
@@ -14,23 +14,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  color: black;
 }
 
 .logo {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #DD7D1E;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-.logo:hover {
-  color: #DD7D1E;
+  color: black;
 }
 
 .navLinks {
   display: none;
   gap: 2rem;
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -40,16 +38,12 @@
 }
 
 .navLink {
-  color: #DD7D1E;
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
-}
-
-.navLink:hover {
-  color: #DD7D1E;
+  color: black;
 }
 
 .navLink::after {
@@ -74,8 +68,6 @@
 }
 
 .ctaButton {
-  background-color: var(--sunshine-yellow) !important;
-  color: #DD7D1E !important;
   border: 2px solid transparent !important;
   font-weight: 600 !important;
   padding: 0.75rem 1.5rem !important;
@@ -83,7 +75,6 @@
 }
 
 .ctaButton:hover {
-  background-color: var(--sunflower-gold) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
 }
@@ -93,7 +84,6 @@
   display: block;
   background: none;
   border: none;
-  color: #DD7D1E;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -109,7 +99,6 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--cream-white);
   border-top: 1px solid var(--warm-sand);
   padding: 1rem;
   display: flex;
@@ -118,15 +107,9 @@
 }
 
 .mobileNavLink {
-  color: #DD7D1E;
   text-decoration: none;
   font-weight: 500;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-}
-
-.mobileNavLink:hover {
-  background-color: var(--buttercream);
-  color: #DD7D1E;
 }

@@ -1,12 +1,9 @@
 .footer {
-  background-color: rgb(255, 241, 201);
-  color: rgb(255, 241, 201);
   margin-top: auto;
 }
 
 /* CTA Section */
 .ctaSection {
-  background: rgb(255, 241, 201);
   padding: 4rem 2rem;
 }
 
@@ -19,7 +16,6 @@
 }
 
 .ctaCard {
-  background: #F5A73D;
   padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
@@ -34,22 +30,18 @@
 }
 
 .ctaCard h3 {
-  color: rgb(61, 48, 40);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .ctaCard p {
-  color: rgb(138, 129, 117);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
 .ctaButton {
   display: inline-block;
-  background-color: var(--sunshine-yellow);
-  color: #DD7D1E;
   padding: 12px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -59,15 +51,12 @@
 }
 
 .ctaButton:hover {
-  background-color: var(--terracotta);
   color: var(--buttercream);
   transform: translateY(-2px);
 }
 
 /* Footer Content */
 .footerContent {
-  background-color: rgb(255, 241, 201);
-  color: var(--buttercream);
   padding: 3rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,7 +66,6 @@
 }
 
 .footerSection h4 {
-  color: rgb(61, 48, 40);
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -86,7 +74,6 @@
 .footerSection p {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: rgb(138, 129, 117);
 }
 
 .footerSection ul {
@@ -99,25 +86,18 @@
 }
 
 .footerSection ul li a {
-  color: rgb(138, 129, 117);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footerSection ul li a:hover {
-  color: var(--sunshine-yellow);
-}
-
 /* Footer Bottom */
 .footerBottom {
-  background-color: rgb(255, 241, 201);
   border-top: 1px solid var(--warm-gray);
   padding: 1.5rem 2rem;
   text-align: center;
 }
 
 .footerBottom p {
-  color: rgb(138, 129, 117);
   margin: 0;
   max-width: 1200px;
   margin: 0 auto;
