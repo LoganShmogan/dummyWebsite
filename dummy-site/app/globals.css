@@ -50,13 +50,14 @@
   --cream-white: #FFFAF2;
   /* 10% - Accent color */
   --button-color: #F0C051;
+  --card-color: #FADD8F;
 
   /* Typography Colors */
-  --heading-color: var(--cream-white);
+  --heading-color: black;
   /* Color for all headings (h1, h2, h3, h4, h5, h6) */
-  --text-color: var(--cream-white);
+  --text-color: black;
   /* Color for all body text (p, li, span, etc) */
-  --link-color: var(--cream-white);
+  --link-color: black;
   /* Color for links */
 
   --radius: 0.625rem;

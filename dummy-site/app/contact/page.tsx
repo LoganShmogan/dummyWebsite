@@ -12,7 +12,7 @@ export default function Home() {
           <div className={styles.contactSection}>
             <div className={styles.contactInfo}>
               <h3>Get in Touch</h3>
-              <p>We'd love to hear from you! Reach out through any of the following methods:</p>
+              <p>We would love to hear from you! Reach out through any of the following methods:</p>
 
               <div className={styles.contactDetails}>
                 <div className={styles.contactItem}>
