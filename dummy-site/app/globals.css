@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,117 +42,99 @@
 }
 
 :root {
-  /* Custom Color Palette - Happy Horizons */
-  --sunshine-yellow: #FFD166;
-  --coral-orange: #FF9E6D;
+  /* Custom Colors */
+  --big-yellow: #F2CB56;
+  /* 60% - Primary color */
+  --big-orange: #f29422;
+  /* 30% - Secondary color */
   --cream-white: #FFFAF2;
-  --warm-gray: #8A8175;
-  --dark-brown: #3D3028;
-  --apricot-glow: #FFB347;
-  --buttercream: #FFF1C9;
-  --terracotta: #E27A5B;
-  --sunflower-gold: #E6AF2E;
-  --warm-sand: #D9C8B4;
+  /* 10% - Accent color */
+  --button-color: #F0C051;
 
-  /* Semantic Tokens with New Colors */
+  /* Typography Colors */
+  --heading-color: var(--cream-white);
+  /* Color for all headings (h1, h2, h3, h4, h5, h6) */
+  --text-color: var(--cream-white);
+  /* Color for all body text (p, li, span, etc) */
+  --link-color: var(--cream-white);
+  /* Color for links */
+
   --radius: 0.625rem;
-  --background: var(--cream-white);
-  --foreground: var(--dark-brown);
-  --card: var(--buttercream);
-  --card-foreground: var(--dark-brown);
-  --popover: var(--buttercream);
-  --popover-foreground: var(--dark-brown);
-  --primary: var(--sunshine-yellow);
-  --primary-foreground: var(--dark-brown);
-  --secondary: var(--coral-orange);
-  --secondary-foreground: var(--dark-brown);
-  --muted: var(--warm-sand);
-  --muted-foreground: var(--warm-gray);
-  --accent: var(--apricot-glow);
-  --accent-foreground: var(--dark-brown);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: var(--warm-sand);
-  --input: var(--warm-sand);
-  --ring: var(--sunflower-gold);
-  --chart-1: var(--sunshine-yellow);
-  --chart-2: var(--coral-orange);
-  --chart-3: var(--apricot-glow);
-  --chart-4: var(--terracotta);
-  --chart-5: var(--sunflower-gold);
-  --sidebar: var(--buttercream);
-  --sidebar-foreground: var(--dark-brown);
-  --sidebar-primary: var(--sunshine-yellow);
-  --sidebar-primary-foreground: var(--dark-brown);
-  --sidebar-accent: var(--apricot-glow);
-  --sidebar-accent-foreground: var(--dark-brown);
-  --sidebar-border: var(--warm-sand);
-  --sidebar-ring: var(--sunflower-gold);
+  --background: var(--big-yellow);  /* 60% - Main background */
 }
 
-.dark {
-  /* Dark mode variants using your palette */
-  --background: var(--dark-brown);
-  --foreground: var(--buttercream);
-  --card: oklch(0.269 0 0);
-  --card-foreground: var(--buttercream);
-  --popover: oklch(0.269 0 0);
-  --popover-foreground: var(--buttercream);
-  --primary: var(--sunflower-gold);
-  --primary-foreground: var(--dark-brown);
-  --secondary: var(--terracotta);
-  --secondary-foreground: var(--buttercream);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: var(--warm-sand);
-  --accent: var(--apricot-glow);
-  --accent-foreground: var(--dark-brown);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: var(--warm-gray);
-  --input: var(--warm-gray);
-  --ring: var(--sunflower-gold);
-  --chart-1: var(--sunflower-gold);
-  --chart-2: var(--apricot-glow);
-  --chart-3: var(--coral-orange);
-  --chart-4: var(--terracotta);
-  --chart-5: var(--warm-sand);
-  --sidebar: oklch(0.269 0 0);
-  --sidebar-foreground: var(--buttercream);
-  --sidebar-primary: var(--sunflower-gold);
-  --sidebar-primary-foreground: var(--dark-brown);
-  --sidebar-accent: var(--terracotta);
-  --sidebar-accent-foreground: var(--buttercream);
-  --sidebar-border: var(--warm-gray);
-  --sidebar-ring: var(--sunflower-gold);
+/* Global Typography Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+p,
+li,
+span,
+div,
+label,
+input,
+textarea,
+select {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Optional: Specific heading colors if you want them all the same */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+/* Or if you want different shades for different heading levels */
+h1 {
+  color: var(--heading-color);
+}
+
+h2 {
+  color: var(--heading-color);
+}
+
+h3 {
+  color: var(--heading-color);
+}
+
+h4 {
+  color: color-mix(in srgb, var(--heading-color) 90%, white 10%);
+}
+
+h5 {
+  color: color-mix(in srgb, var(--heading-color) 80%, white 20%);
+}
+
+h6 {
+  color: color-mix(in srgb, var(--heading-color) 70%, white 30%);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-}
-
-/* Additional utility classes for your custom colors */
-@layer utilities {
-  .bg-sunshine-yellow { background-color: var(--sunshine-yellow); }
-  .bg-coral-orange { background-color: var(--coral-orange); }
-  .bg-cream-white { background-color: var(--cream-white); }
-  .bg-buttercream { background-color: var(--buttercream); }
-  .bg-apricot-glow { background-color: var(--apricot-glow); }
-  .bg-terracotta { background-color: var(--terracotta); }
-  .bg-sunflower-gold { background-color: var(--sunflower-gold); }
-  .bg-warm-sand { background-color: var(--warm-sand); }
-  
-  .text-sunshine-yellow { color: var(--sunshine-yellow); }
-  .text-coral-orange { color: var(--coral-orange); }
-  .text-dark-brown { color: var(--dark-brown); }
-  .text-warm-gray { color: var(--warm-gray); }
-  .text-terracotta { color: var(--terracotta); }
-  .text-sunflower-gold { color: var(--sunflower-gold); }
-  
-  .border-sunshine-yellow { border-color: var(--sunshine-yellow); }
-  .border-coral-orange { border-color: var(--coral-orange); }
-  .border-warm-sand { border-color: var(--warm-sand); }
-  .border-sunflower-gold { border-color: var(--sunflower-gold); }
 }

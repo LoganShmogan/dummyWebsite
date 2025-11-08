@@ -1,0 +1,156 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contactHeading {
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  margin-bottom: 2rem; 
+}
+
+
+.mainArea {
+  max-width: 72rem; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem;
+  padding-top: 2.5rem; 
+  padding-bottom: 2.5rem;
+  border-top: 1px solid #e5e7eb; 
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactInfo h3, .contactForm h3, .mapSection h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contactInfo p {
+  margin-bottom: 1.5rem;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contactItem p {
+  margin: 0.25rem 0;
+}
+
+.hoursInfo h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hourItem span:first-child {
+  font-weight: 500;
+}
+
+/* Contact Form Styles */
+.contactForm {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.formInput, .formTextarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.15s ease;
+}
+
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: #ea580c; /* orange-500 */
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+/* Map Section */
+.mapSection {
+  margin-top: 2rem;
+}
+
+.mapSection h3 {
+  margin-bottom: 1rem;
+}
+
+.mapPlaceholder {
+  border: 2px dashed #d1d5db;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contactForm {
+    padding: 1.5rem;
+  }
+  
+  .hourItem {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

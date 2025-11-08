@@ -1,83 +1,9 @@
 .footer {
-  background-color: var(--dark-brown);
-  color: var(--dark-brown);
   margin-top: auto;
-}
-
-/* CTA Section */
-.ctaSection {
-  background: linear-gradient(135deg, var(--sunshine-yellow) 0%, var(--apricot-glow) 100%);
-  padding: 4rem 2rem;
-}
-
-.ctaGrid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.ctaCard {
-  background: var(--buttercream);
-  padding: 2.5rem;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(61, 48, 40, 0.1);
-  border: 2px solid var(--warm-sand);
-  transition: all 0.3s ease;
-}
-
-.ctaCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(61, 48, 40, 0.15);
-  border-color: var(--sunflower-gold);
-}
-
-.ctaCard h3 {
-  color: var(--dark-brown);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.ctaCard p {
-  color: var(--warm-gray);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.ctaButton {
-  display: inline-block;
-  background-color: var(--coral-orange);
-  color: var(--dark-brown);
-  padding: 12px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.ctaButton:hover {
-  background-color: var(--terracotta);
-  color: var(--buttercream);
-  transform: translateY(-2px);
-}
-
-/* Specific card variations */
-.enrollCard {
-  border-top: 4px solid var(--sunshine-yellow);
-}
-
-.aboutCard {
-  border-top: 4px solid var(--coral-orange);
 }
 
 /* Footer Content */
 .footerContent {
-  background-color: var(--dark-brown);
-  color: var(--buttercream);
   padding: 3rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,7 +13,6 @@
 }
 
 .footerSection h4 {
-  color: var(--sunshine-yellow);
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -96,7 +21,6 @@
 .footerSection p {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: var(--warm-sand);
 }
 
 .footerSection ul {
@@ -109,25 +33,18 @@
 }
 
 .footerSection ul li a {
-  color: var(--warm-sand);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footerSection ul li a:hover {
-  color: var(--sunshine-yellow);
-}
-
 /* Footer Bottom */
 .footerBottom {
-  background-color: var(--dark-brown);
   border-top: 1px solid var(--warm-gray);
   padding: 1.5rem 2rem;
   text-align: center;
 }
 
 .footerBottom p {
-  color: var(--warm-sand);
   margin: 0;
   max-width: 1200px;
   margin: 0 auto;
@@ -135,34 +52,14 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .ctaSection {
-    padding: 3rem 1rem;
-  }
-  
-  .ctaCard {
-    padding: 2rem 1.5rem;
-  }
-  
   .footerContent {
     padding: 2rem 1rem;
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
-  .ctaGrid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 480px) {
-  .ctaSection {
-    padding: 2rem 1rem;
-  }
-  
-  .ctaCard {
-    padding: 1.5rem 1rem;
-  }
-  
   .footerContent {
     padding: 1.5rem 1rem;
   }
