@@ -136,9 +136,6 @@ export default function About() {
                   className={styles.staffHeadshot}
                   priority={index < 2} 
                 />
-                <div className={styles.imagePlaceholder}>
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </div>
               </div>
               <div className={styles.staffInfo}>
                 <h3>{member.name}</h3>

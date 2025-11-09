@@ -3,14 +3,23 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import styles from './Navbar.module.css';
+import Image from "next/image";
 
 export default function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo}>
-          Happy Horizons
+          <Image 
+            src="/companyLogo.png" 
+            alt="Happy Horizons Logo"
+            width={75}
+            height={0} 
+            className={styles.logoImage}
+            priority 
+          />
         </Link>
+        
 
         <div className={styles.navLinks}>
           <Link href="/" className={styles.navLink}>Home</Link>
