@@ -3,7 +3,6 @@
 import styles from './page.module.css';
 import dynamic from 'next/dynamic';
 
-// Dynamically import the map component with SSR disabled
 const MapWithNoSSR = dynamic(
   () => import('@/app/components/Map'),
   { ssr: false }
