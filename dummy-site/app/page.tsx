@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <p className={styles.missionStatement}>
-            Nurturing young minds with engaging, inclusive education that sparks curiosity, creativity, and confidence for bright futures.
+            The mission of Happy Horizons is to foster a love of learning and a sense of wonder in every child. We provide a caring, engaging, and inclusive space that encourages curiosity, creativity, and confidence—helping each child grow toward bright and limitless horizons.
           </p>
         </div>
       </section>
