@@ -124,18 +124,39 @@
 
 /* Map Section */
 .mapSection {
-  margin-top: 2rem;
+  padding: 3rem 2rem;
+  background: var(--cream-white);
+  text-align: center;
 }
 
 .mapSection h3 {
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
-.mapPlaceholder {
-  border: 2px dashed #d1d5db;
-  padding: 3rem;
-  text-align: center;
-  border-radius: 0.5rem;
+.mapContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(61, 48, 40, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Leaflet specific adjustments */
+.leaflet-container {
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mapSection {
+    padding: 2rem 1rem;
+  }
+  
+  .mapContainer {
+    border-radius: 8px;
+  }
 }
 
 /* Responsive Design */

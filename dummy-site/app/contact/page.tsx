@@ -1,7 +1,15 @@
 'use client';
-import styles from './page.module.css';
 
-export default function Home() {
+import styles from './page.module.css';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the map component with SSR disabled
+const MapWithNoSSR = dynamic(
+  () => import('@/app/components/Map'),
+  { ssr: false }
+);
+
+export default function Contact() {
   return (
     <>
       <section className={styles.mainArea}>
@@ -93,9 +101,8 @@ export default function Home() {
         {/* Map Section */}
         <div className={styles.mapSection}>
           <h3>Find Us</h3>
-          <div className={styles.mapPlaceholder}>
-            {/* You can replace this with an actual map component */}
-            <p>Map would be embedded here showing location at 28 Shamrock Street, Tākaro, Palmerston North</p>
+          <div className={styles.mapContainer}>
+            <MapWithNoSSR />
           </div>
         </div>
       </section>
