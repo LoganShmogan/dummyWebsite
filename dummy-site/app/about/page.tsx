@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import Image from 'next/image';
 
 export default function About() {
   const values = [
@@ -34,41 +35,60 @@ export default function About() {
 
   const staff = [
     {
-      name: "Sarah Johnson",
-      position: "Director & Lead Educator",
-      bio: "With over 15 years of early childhood education experience, Sarah leads our team with passion and dedication.",
-      image: "/images/sarah-johnson.jpg" // Replace with actual image path
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff0.jpg" 
     },
     {
-      name: "Michael Chen",
-      position: "Preschool Teacher",
-      bio: "Michael specializes in creative arts and brings innovative learning approaches to our preschool program.",
-      image: "/images/michael-chen.jpg"
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff1.jpg" 
     },
     {
-      name: "Emily Rodriguez",
-      position: "Toddler Room Coordinator",
-      bio: "Emily creates engaging, developmentally appropriate activities that help toddlers explore and grow.",
-      image: "/images/emily-rodriguez.jpg"
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff2.jpg" 
     },
     {
-      name: "David Thompson",
-      position: "Outdoor Education Specialist",
-      bio: "David leads our nature-based learning programs and outdoor exploration activities.",
-      image: "/images/david-thompson.jpg"
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff3.jpg" 
     },
     {
-      name: "Jessica Williams",
-      position: "Infant Care Specialist",
-      bio: "Jessica provides nurturing, individualized care for our youngest learners with warmth and expertise.",
-      image: "/images/jessica-williams.jpg"
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff4.jpg" 
     },
     {
-      name: "Robert Garcia",
-      position: "Program Coordinator",
-      bio: "Robert ensures our curriculum meets the highest standards and supports our teaching team.",
-      image: "/images/robert-garcia.jpg"
-    }
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff5.jpg" 
+    },
+    {
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff6.jpg" 
+    },
+    {
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff7.jpg" 
+    },
+    {
+      name: "Staff",
+      position: "Position",
+      bio: "Bio",
+      image: "/StaffPhoto/staff8.jpg" 
+    },
+
   ];
 
   return (
@@ -108,7 +128,14 @@ export default function About() {
           {staff.map((member, index) => (
             <div key={index} className={styles.staffCard}>
               <div className={styles.staffImage}>
-                {/* Placeholder for image - replace with actual Image component */}
+                <Image
+                  src={member.image}
+                  alt={`Headshot of ${member.name}`}
+                  width={120}
+                  height={120}
+                  className={styles.staffHeadshot}
+                  priority={index < 2} 
+                />
                 <div className={styles.imagePlaceholder}>
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
