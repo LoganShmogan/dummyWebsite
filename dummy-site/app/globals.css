@@ -47,11 +47,10 @@
   /* 60% - Primary color */
   --big-orange: #f29422;
   /* 30% - Secondary color */
-  --cream-white: #FFFAF2;
-  /* 10% - Accent color */
+  --tangerine-orange: #FFB800;
+
   --button-color: #F0C051;
   --card-color: #FADD8F;
-
   /* Typography Colors */
   --heading-color: black;
   /* Color for all headings (h1, h2, h3, h4, h5, h6) */
@@ -61,7 +60,7 @@
   /* Color for links */
 
   --radius: 0.625rem;
-  --background: var(--big-yellow);  /* 60% - Main background */
+  --background: var(--tangerine-orange);  /* 60% - Main background */
 }
 
 /* Global Typography Styles */
