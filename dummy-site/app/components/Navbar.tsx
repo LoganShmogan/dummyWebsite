@@ -11,9 +11,9 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo}>
           <Image 
-            src="/companyLogo.png" 
+            src="/companyLogo.jpg" 
             alt="Happy Horizons Logo"
-            width={75}
+            width={100}
             height={0} 
             className={styles.logoImage}
             priority 
