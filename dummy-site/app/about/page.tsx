@@ -33,64 +33,6 @@ export default function About() {
     }
   ];
 
-  const staff = [
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff0.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff1.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff2.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff3.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff4.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff5.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff6.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff7.jpg" 
-    },
-    {
-      name: "Staff",
-      position: "Position",
-      bio: "Bio",
-      image: "/StaffPhoto/staff8.jpg" 
-    },
-
-  ];
-
   return (
     <div className={styles.container}>
       {/* Mission Section */}
@@ -113,35 +55,6 @@ export default function About() {
               <div className={styles.cardNumber}>{index + 1}</div>
               <h3>{value.title}</h3>
               <p>{value.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Staff Section */}
-      <section className={styles.staffSection}>
-        <div className={styles.sectionHeader}>
-          <h2>Our Family</h2>
-          <p>Meet the dedicated team that makes Happy Horizons a special place for your child</p>
-        </div>
-        <div className={styles.staffGrid}>
-          {staff.map((member, index) => (
-            <div key={index} className={styles.staffCard}>
-              <div className={styles.staffImage}>
-                <Image
-                  src={member.image}
-                  alt={`Headshot of ${member.name}`}
-                  width={120}
-                  height={120}
-                  className={styles.staffHeadshot}
-                  priority={index < 2} 
-                />
-              </div>
-              <div className={styles.staffInfo}>
-                <h3>{member.name}</h3>
-                <p className={styles.position}>{member.position}</p>
-                <p className={styles.bio}>{member.bio}</p>
-              </div>
             </div>
           ))}
         </div>
