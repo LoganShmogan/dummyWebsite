@@ -9,17 +9,8 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link href="/" className={styles.logo}>
-          <Image 
-            src="/companyLogo.jpg" 
-            alt="Happy Horizons Logo"
-            width={100}
-            height={0} 
-            className={styles.logoImage}
-            priority 
-          />
-        </Link>
-        
+       <h1 className={styles.name}>Happy Horizons</h1> 
+      
 
         <div className={styles.navLinks}>
           <Link href="/" className={styles.navLink}>Home</Link>
