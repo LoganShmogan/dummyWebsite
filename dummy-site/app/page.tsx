@@ -8,21 +8,21 @@ export default function Home() {
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
           <Image
-            src="/stockBanner.jpg"
+            src="/companyBanner.jpg"
             alt="Background"
             fill
             style={{
               objectFit: 'cover',
-              filter: 'grayscale(30%) brightness(60%)'
+              // filter: 'grayscale(30%) brightness(60%)'
             }}
             priority
           />
         </div>
-        <div className={styles.heroContent}>
+        {/* <div className={styles.heroContent}>
           <p className={styles.missionStatement}>
             The mission of Happy Horizons is to foster a love of learning and a sense of wonder in every child. We provide a caring, engaging, and inclusive space that encourages curiosity, creativity, and confidence, helping each child grow toward bright and limitless horizons.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* CTA Cards Section */}

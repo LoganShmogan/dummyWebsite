@@ -80,6 +80,18 @@
 }
 
 /* Contact Form Styles */
+.formInputMon, .formInputTue, .formInputWed, .formInputThu, .formInputFri{
+  margin-top: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #EDD287;
+}
+.formInputMon:focus, .formInputTue:focus, .formInputWed:focus, .formInputThu:focus, .formInputFri:focus{
+  outline: none;
+  border-color: #ea580c; /* orange-500 */
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+}
+
 .contactForm {
   padding: 2rem;
   border-radius: 0.5rem;

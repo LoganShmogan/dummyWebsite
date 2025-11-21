@@ -58,6 +58,7 @@
   /* Color for all body text (p, li, span, etc) */
   --link-color: black;
   /* Color for links */
+  --link-hover-color: grey;
 
   --radius: 0.625rem;
   --background: var(--tangerine-orange);  /* 60% - Main background */
@@ -92,6 +93,12 @@ a {
 
 a:hover {
   color: var(--link-hover-color);
+  opacity: 0.6;
+}
+
+Link:hover {
+  color: var(--link-hover-color);
+  opacity: 0.6;
 }
 
 /* Optional: Specific heading colors if you want them all the same */

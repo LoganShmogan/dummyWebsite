@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+todo.txt
+.todo.txt.swp
 
 # debug
 npm-debug.log*
