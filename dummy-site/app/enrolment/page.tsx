@@ -3,7 +3,7 @@
 import styles from './page.module.css';
 import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 const MapWithNoSSR = dynamic(
   () => import('@/app/components/Map'),
@@ -25,27 +25,30 @@ export default function Contact() {
     const publicKey = 'BAoNsXlnhqfcGq7F0';
 
     // Error handling for enrolement form
-     if (!form.current) {
+    if (!form.current) {
       setMessage('Form reference not found');
       setIsSubmitting(false);
       return;
     }
-// error handling  
+
     try {
       const result = await emailjs.sendForm(serviceID, templateID, form.current, publicKey);
       console.log('SUCCESS!', result);
       setMessage('Enquiry sent successfully!');
       form.current.reset();
-    } catch (error: any) {
-      console.error('FAILED...', error);
-      console.error('Error status:', error?.status);
-      console.error('Error text:', error?.text);
+    } catch (error) {
+      // Use EmailJS's own response status type
+      const emailError = error as EmailJSResponseStatus;
       
-      if (error?.status === 400) {
+      console.error('FAILED...', emailError);
+      console.error('Error status:', emailError?.status);
+      console.error('Error text:', emailError?.text);
+      
+      if (emailError?.status === 400) {
         setMessage('Invalid configuration. Please check your EmailJS credentials.');
-      } else if (error?.status === 403) {
+      } else if (emailError?.status === 403) {
         setMessage('Access denied. Check your Public Key.');
-      } else if (error?.status === 404) {
+      } else if (emailError?.status === 404) {
         setMessage('Service or Template not found.');
       } else {
         setMessage('Failed to send enquiry. Please try again or contact support.');
