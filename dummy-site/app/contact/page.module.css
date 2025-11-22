@@ -1,0 +1,190 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contactHeading {
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  margin-bottom: 2rem; 
+}
+
+
+.mainArea {
+  max-width: 72rem; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem;
+  padding-top: 2.5rem; 
+  padding-bottom: 2.5rem;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.contactInfo h3, .contactForm h3, .mapSection h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contactInfo p {
+  margin-bottom: 1.5rem;
+  background-color: var(--card-color);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--card-color);
+}
+
+.contactItem h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contactItem p {
+  margin: 0.25rem 0;
+}
+
+.hoursInfo h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.hourItem span:first-child {
+  font-weight: 500;
+}
+
+/* Contact Form Styles */
+.formInputMon, .formInputTue, .formInputWed, .formInputThu, .formInputFri{
+  margin-top: 10px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #EDD287;
+}
+.formInputMon:focus, .formInputTue:focus, .formInputWed:focus, .formInputThu:focus, .formInputFri:focus{
+  outline: none;
+  border-color: #ea580c; /* orange-500 */
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+}
+
+.contactForm {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.formInput, .formTextarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #EDD287;
+}
+
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: #ea580c; /* orange-500 */
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  background-color: var(--button-color);
+}
+
+/* Map Section */
+.mapSection {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.mapSection h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.mapContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(61, 48, 40, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Leaflet specific adjustments */
+.leaflet-container {
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mapSection {
+    padding: 2rem 1rem;
+  }
+  
+  .mapContainer {
+    border-radius: 8px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contactForm {
+    padding: 1.5rem;
+  }
+  
+  .hourItem {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
