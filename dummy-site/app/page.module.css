@@ -64,6 +64,12 @@
   z-index: 2;
 }
 
+.heroLogo img {
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ===== CTA CARDS SECTION ===== */
 
 .ctaSection {
