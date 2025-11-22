@@ -95,53 +95,56 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className={styles.contactForm}>
-            <h3>Send us an Equiry</h3>
-            <form className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" className={styles.formInput} />
-              </div>
+      <h3>Send us an Enquiry</h3>
+      {message && <div className={styles.message}>{message}</div>}
+      <form ref={form} onSubmit={sendEmail} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" className={styles.formInput} />
-              </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" className={styles.formInput} />
-              </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="childsName">Childs Name</label>
-                <input type="text" id="childsName" className={styles.formInput} />
-              </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="childsName">Child's Name</label>
+          <input type="text" id="childsName" name="childsName" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="dob">Childs Date of Birth</label>
-                <input type="text" id="dob" className={styles.formInput} />
-              </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="dob">Child's Date of Birth</label>
+          <input type="date" id="dob" name="dob" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="startDate">Perfered Start Date (or Estimate)</label>
-                <input type="text" id="startDate" className={styles.formInput} />
-              </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="startDate">Preferred Start Date (or Estimate)</label>
+          <input type="text" id="startDate" name="startDate" className={styles.formInput} required />
+        </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="hours">Perfered Hours for Enrolment (or Estimate)</label>
-                <input type="text" id="monHours" className={styles.formInputMon} />
-                <input type="text" id="tueHours" className={styles.formInputTue} />
-                <input type="text" id="wedHours" className={styles.formInputWed} />
-                <input type="text" id="thuHours" className={styles.formInputThu} />
-                <input type="text" id="friHours" className={styles.formInputFri} />
-              </div>
-
-              <button type="submit" className={styles.submitButton}>
-                Send Enquiry
-              </button>
-            </form>
+        <div className={styles.formGroup}>
+          <label htmlFor="hours">Preferred Hours for Enrolment (or Estimate)</label>
+          <div className={styles.hoursGrid}>
+            <input type="text" id="monHours" name="monHours" placeholder="Mon" className={styles.formInput} />
+            <input type="text" id="tueHours" name="tueHours" placeholder="Tue" className={styles.formInput} />
+            <input type="text" id="wedHours" name="wedHours" placeholder="Wed" className={styles.formInput} />
+            <input type="text" id="thuHours" name="thuHours" placeholder="Thu" className={styles.formInput} />
+            <input type="text" id="friHours" name="friHours" placeholder="Fri" className={styles.formInput} />
           </div>
         </div>
+
+        <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
+          {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+        </button>
+      </form>
+    </div>
+          </div>
 
         {/* Map Section */}
         <div className={styles.mapSection}>
