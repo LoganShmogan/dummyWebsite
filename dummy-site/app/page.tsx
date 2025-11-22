@@ -6,29 +6,37 @@ export default function Home() {
   return (
     <>
       <section className={styles.heroSection}>
+        {/* Banner Image - Hidden on mobile */}
         <div className={styles.heroBackground}>
           <Image
             src="/companyBanner.jpg"
-            alt="Background"
+            alt="Happy Horizons Childcare Center"
             fill
             style={{
               objectFit: 'cover',
-              // filter: 'grayscale(30%) brightness(60%)'
             }}
             priority
           />
         </div>
-        {/* <div className={styles.heroContent}>
-          <p className={styles.missionStatement}>
-            The mission of Happy Horizons is to foster a love of learning and a sense of wonder in every child. We provide a caring, engaging, and inclusive space that encourages curiosity, creativity, and confidence, helping each child grow toward bright and limitless horizons.
-          </p>
-        </div> */}
+        
+        {/* Logo Image - Hidden on desktop */}
+        <div className={styles.heroLogo}>
+          <Image
+            src="/companyLogo.jpg" 
+            alt="Happy Horizons Logo"
+            width={200}
+            height={200}
+            style={{
+              objectFit: 'contain',
+            }}
+            priority
+          />
+        </div>
       </section>
 
       {/* CTA Cards Section */}
       <div className={styles.ctaSection}>
         <div className={styles.ctaGrid}>
-
           <div className={`${styles.ctaCard} ${styles.aboutCard}`}>
             <h3>About Us</h3>
             <p>Learn more about our story, our team, and what makes Happy Horizons special</p>

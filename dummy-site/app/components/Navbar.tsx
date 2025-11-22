@@ -34,7 +34,7 @@ export default function Navbar() {
         
         {/* Desktop CTA Button - hidden on mobile */}
         <div className={styles.ctaContainer}>
-          <Button className={styles.ctaButton}>Enrol Now</Button>
+          <Link href="/enrolment"><Button className={styles.ctaButton}>Enrol Now</Button></Link>
         </div>
 
         {/* Mobile Menu Button */}

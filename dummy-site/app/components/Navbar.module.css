@@ -8,7 +8,7 @@
 }
 
 .name {
-  /* Add any specific styles for your brand name */
+  font-size: larger;
 }
 
 h1:hover {
