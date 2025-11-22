@@ -123,6 +123,224 @@
   box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
 }
 
+/* ===== OUR STORY SECTION ===== */
+
+.storySection {
+  padding: 4rem 2rem;
+  background-color: var(--buttercream);
+}
+
+.storyCard {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--card-color);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(61, 48, 40, 0.1);
+}
+
+.storyImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.storyContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.storyButton {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-color: var(--button-color);
+  color: inherit;
+}
+
+.storyButton:hover {
+  background-color: var(--sunflower-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
+}
+
+/* ===== OUR STAFF SECTION ===== */
+
+.staffSection {
+  padding: 4rem 2rem;
+  background-color: var(--background);
+}
+
+.staffCard {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--card-color);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(61, 48, 40, 0.1);
+}
+
+/* Reverse layout for staff section - image on right */
+.staffCard.reverseLayout {
+  direction: rtl; /* This reverses the grid order */
+}
+
+.staffCard.reverseLayout > * {
+  direction: ltr; /* Reset direction for content inside */
+}
+
+.staffImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staffContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.staffContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.staffButton {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-color: var(--button-color);
+  color: inherit;
+}
+
+.staffButton:hover {
+  background-color: var(--sunflower-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN FOR STORY & STAFF SECTIONS ===== */
+
+/* Tablet and smaller screens */
+@media (max-width: 900px) {
+  .storySection,
+  .staffSection {
+    padding: 3rem 1rem;
+  }
+  
+  .storyCard,
+  .staffCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .storyContent h2,
+  .staffContent h2 {
+    font-size: 2rem;
+  }
+  
+  .storyImage,
+  .staffImage {
+    order: -1; /* Move image to top on mobile */
+  }
+  
+  /* Reset reverse layout on mobile */
+  .staffCard.reverseLayout {
+    direction: ltr;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .storySection,
+  .staffSection {
+    padding: 2rem 1rem;
+  }
+  
+  .storyCard,
+  .staffCard {
+    padding: 1.5rem;
+  }
+  
+  .storyContent h2,
+  .staffContent h2 {
+    font-size: 1.75rem;
+  }
+  
+  .storyContent p,
+  .staffContent p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS FOR STORY & STAFF SECTIONS ===== */
+
+.storyButton:focus,
+.staffButton:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+  background-color: var(--sunflower-gold);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .storyCard,
+  .staffCard {
+    border: 2px solid currentColor;
+  }
+  
+  .storyButton,
+  .staffButton {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .storyCard,
+  .staffCard,
+  .storyButton,
+  .staffButton {
+    transition: none;
+  }
+  
+  .storyButton:hover,
+  .staffButton:hover {
+    transform: none;
+  }
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablet and smaller screens */
