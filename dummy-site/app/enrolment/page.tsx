@@ -30,7 +30,7 @@ export default function Contact() {
       setIsSubmitting(false);
       return;
     }
-
+// error handling  
     try {
       const result = await emailjs.sendForm(serviceID, templateID, form.current, publicKey);
       console.log('SUCCESS!', result);
