@@ -112,7 +112,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Enrolement Form */}
           <div className={styles.contactForm}>
             <h3>Send us an Enquiry</h3>
             {message && (
