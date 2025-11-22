@@ -1,7 +1,12 @@
+.container {
+  min-height: 100vh;
+}
+
 /* Mission Section */
 .missionSection {
   padding: 5rem 2rem;
   text-align: center;
+  background: var(--buttercream);
 }
 
 .missionSection .sectionHeader p {
@@ -14,6 +19,7 @@
 /* Staff Section */
 .staffSection {
   padding: 5rem 2rem;
+  background: var(--background);
 }
 
 .staffGrid {
@@ -39,7 +45,6 @@
   box-shadow: 0 10px 15px -3px rgba(61, 48, 40, 0.15);
   border-top-color: var(--sunflower-gold);
 }
-
 
 .staffInfo h3 {
   font-size: 1.4rem;
@@ -73,88 +78,6 @@
   object-fit: cover;
   border: 4px solid var(--cream-white);
   box-shadow: 0 4px 8px rgba(61, 48, 40, 0.1);
-}
-
-/* Responsive Design Updates */
-@media (max-width: 768px) {
-  .missionSection,
-  .staffSection {
-    padding: 3rem 1rem;
-  }
-  
-  .missionSection .sectionHeader p {
-    font-size: 1.1rem;
-  }
-  
-  .staffGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .staffCard {
-    padding: 1.5rem;
-  }
-  
-  .staffHeadshot {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* Responsive Design Updates */
-@media (max-width: 768px) {
-  .missionSection,
-  .staffSection {
-    padding: 3rem 1rem;
-  }
-  
-  .missionSection .sectionHeader p {
-    font-size: 1.1rem;
-  }
-  
-  .staffGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .staffCard {
-    padding: 1.5rem;
-  }
-  
-  .imagePlaceholder {
-    width: 100px;
-    height: 100px;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .missionSection,
-  .staffSection {
-    padding: 3rem 1rem;
-  }
-  
-  .missionSection .sectionHeader p {
-    font-size: 1.1rem;
-  }
-  
-  .staffGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .staffCard {
-    padding: 1.5rem;
-  }
-  
-  .staffHeadshot {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.container {
-  min-height: 100vh;
 }
 
 /* Values Section */
@@ -218,6 +141,7 @@
   font-weight: bold;
   font-size: 1.1rem;
   border: 2px solid var(--cream-white);
+  background: var(--sunshine-yellow);
 }
 
 .valueCard h3 {
@@ -289,9 +213,34 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .missionSection,
+  .staffSection,
+  .valuesSection {
+    padding: 3rem 1rem;
+  }
+  
+  .missionSection .sectionHeader p {
+    font-size: 1.1rem;
+  }
+  
+  .staffGrid,
   .valuesGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .staffCard,
+  .valueCard {
+    padding: 1.5rem;
+  }
+  
+  .staffHeadshot {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
   }
   
   .ctaGrid {
@@ -299,13 +248,8 @@
     gap: 1.5rem;
   }
   
-  .valuesSection,
   .ctaSection {
     padding: 3rem 1rem;
-  }
-  
-  .sectionHeader h2 {
-    font-size: 2rem;
   }
   
   .ctaCard {
@@ -314,9 +258,5 @@
   
   .ctaCard h3 {
     font-size: 1.7rem;
-  }
-  
-  .valueCard {
-    padding: 1.5rem;
   }
 }

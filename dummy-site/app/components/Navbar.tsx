@@ -86,13 +86,6 @@ export default function Navbar() {
           >
             Gallery
           </Link>
-          {/* Mobile CTA Button */}
-          <Button 
-            className={styles.ctaButton}
-            onClick={closeMobileMenu}
-          >
-            Enrol Now
-          </Button>
         </div>
       )}
     </header>

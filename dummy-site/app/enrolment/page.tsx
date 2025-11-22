@@ -2,6 +2,8 @@
 
 import styles from './page.module.css';
 import dynamic from 'next/dynamic';
+import { useRef, useState} from 'react'
+import emailjs from '@emailjs/browser';
 
 const MapWithNoSSR = dynamic(
   () => import('@/app/components/Map'),
@@ -9,6 +11,34 @@ const MapWithNoSSR = dynamic(
 );
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMessage('');
+
+    // Replace these with your actual EmailJS credentials
+    const serviceID = 'iservice_hzqpetr';
+    const templateID = 'template_5jwq11b';
+    const publicKey = 'BAoNsXlnhqfcGq7F0';
+
+    if (form.current) {
+      emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+        .then((result) => {
+          setMessage('Enquiry sent successfully!');
+          form.current?.reset();
+        }, (error) => {
+          setMessage('Failed to send enquiry. Please try again.');
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    }
+  };
+
   return (
     <>
       <section className={styles.mainArea}>
