@@ -3,7 +3,7 @@
 /* Main footer container */
 .footer {
   margin-top: auto; /* Pushes footer to bottom when content is short */
-  background-color: var(--card-color);
+  background-color: var(--cardBack);
 }
 
 /* ===== FOOTER CONTENT LAYOUT ===== */
@@ -48,7 +48,7 @@
 /* Link hover effects */
 .footerSection ul li a:hover,
 .footerSection ul li a:focus {
-  color: var(--coral-orange);
+  background-color: var(--buttonHover);
   text-decoration: underline;
 }
 

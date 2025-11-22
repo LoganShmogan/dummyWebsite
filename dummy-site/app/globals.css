@@ -47,7 +47,7 @@
   /* 60% - Primary color */
   --big-orange: #f29422;
   /* 30% - Secondary color */
-  --tangerine-orange: #FFB800;
+  --tangerine-orange: #ffb800;
 
   --button-color: #F0C051;
   --card-color: #FADD8F;
@@ -62,79 +62,71 @@
 
   --radius: 0.625rem;
   --background: var(--tangerine-orange);  /* 60% - Main background */
+
+  /* ====== Design 1 Color Board ====== */
+  /* YELLOW / ORANGE / WHITE */
+  /*
+  Link
+    Link Hover
+
+  Button
+    Button hover
+
+  Card
+    Indiv Card
+      Card Hover
+        Info
+
+  MainArea Container
+    Headings
+
+  Container
+    Section
+      Heading
+        Item Layout
+          Item
+  Form
+    Form Layout
+      Form Input Field
+        button
+  */
+  --backDrop: #ffb800;
+  --FrontDrop: #ffcc00;
+  
+  --cardBack: #fadd8f;
+  --cardFront: #FFE2A5;
+
+  --buttonBack: #f0c051;
+  --buttonHover: #FFCD6B;
+
+  --sectionBack: #D1B977;
+  --sectionFront: #D1B98B;
+
+  --formBack: #fadd8f;
+  --formFront: #FFE2A5;
+  --formInput: white;
+  --formInputHover: grey;
+
+  --text: black;
+
+
+  /* ====== Design 2 Color Board ====== */
+  /* WHITE / YELLOW / ORANGE */
+
+
+
+  /* ====== Design 3 Color Board ====== */
+  /* WHITE / GRAY / YELLOW */
+
 }
 
-/* Global Typography Styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
+  /* Global Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
 }
 
-p,
-li,
-span,
-div,
-label,
-input,
-textarea,
-select {
-  color: var(--text-color);
-}
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
 
-a:hover {
-  color: var(--link-hover-color);
-  opacity: 0.6;
-}
-
-Link:hover {
-  color: var(--link-hover-color);
-  opacity: 0.6;
-}
-
-/* Optional: Specific heading colors if you want them all the same */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
-}
-
-/* Or if you want different shades for different heading levels */
-h1 {
-  color: var(--heading-color);
-}
-
-h2 {
-  color: var(--heading-color);
-}
-
-h3 {
-  color: var(--heading-color);
-}
-
-h4 {
-  color: color-mix(in srgb, var(--heading-color) 90%, white 10%);
-}
-
-h5 {
-  color: color-mix(in srgb, var(--heading-color) 80%, white 20%);
-}
-
-h6 {
-  color: color-mix(in srgb, var(--heading-color) 70%, white 30%);
-}
 
 @layer base {
   * {
