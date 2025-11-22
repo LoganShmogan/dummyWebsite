@@ -2,8 +2,8 @@
 
 import styles from './page.module.css';
 import dynamic from 'next/dynamic';
-import { useRef, useState} from 'react'
-import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react'
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 const MapWithNoSSR = dynamic(
   () => import('@/app/components/Map'),
@@ -15,41 +15,59 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setMessage('');
 
-    // Replace these with your actual EmailJS credentials
-    const serviceID = 'iservice_hzqpetr';
+    const serviceID = 'service_hzqpetr';
     const templateID = 'template_5jwq11b';
     const publicKey = 'BAoNsXlnhqfcGq7F0';
 
-    if (form.current) {
-      emailjs.sendForm(serviceID, templateID, form.current, publicKey)
-        .then((result) => {
-          setMessage('Enquiry sent successfully!');
-          form.current?.reset();
-        }, (error) => {
-          setMessage('Failed to send enquiry. Please try again.');
-        })
-        .finally(() => {
-          setIsSubmitting(false);
-        });
+    // Error handling for contact form
+    if (!form.current) {
+      setMessage('Form reference not found');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const result = await emailjs.sendForm(serviceID, templateID, form.current, publicKey);
+      console.log('SUCCESS!', result);
+      setMessage('Enquiry sent successfully!');
+      form.current.reset();
+    } catch (error) {
+       
+      const emailError = error as EmailJSResponseStatus;
+      
+      console.error('FAILED...', emailError);
+      console.error('Error status:', emailError?.status);
+      console.error('Error text:', emailError?.text);
+      
+      if (emailError?.status === 400) {
+        setMessage('Invalid configuration. Please check your EmailJS credentials.');
+      } else if (emailError?.status === 403) {
+        setMessage('Access denied. Check your Public Key.');
+      } else if (emailError?.status === 404) {
+        setMessage('Service or Template not found.');
+      } else {
+        setMessage('Failed to send enquiry. Please try again or contact support.');
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <>
       <section className={styles.mainArea}>
-        <h2 className={styles.contactHeading}>Enrolment</h2>
+        <h2 className={styles.contactHeading}>Contact</h2>
 
         <div className={styles.contactContainer}>
           {/* Contact Information */}
           <div className={styles.contactSection}>
             <div className={styles.contactInfo}>
               <h3>Get in Touch</h3>
-              <p>For enrolements please fill out the enquiry forum</p>
               <p>We would love to hear from you! Reach out through any of the following methods:
               </p>
 
@@ -95,56 +113,34 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className={styles.contactForm}>
-      <h3>Send us an Enquiry</h3>
-      {message && <div className={styles.message}>{message}</div>}
-      <form ref={form} onSubmit={sendEmail} className={styles.form}>
-        <div className={styles.formGroup}>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" className={styles.formInput} required />
-        </div>
+            <h3>Send us a Message</h3>
+            {message && (
+              <div className={message.includes('successfully') ? styles.messageSuccess : styles.messageError}>
+                {message}
+              </div>
+            )}
+            <form ref={form} onSubmit={sendEmail} className={styles.form}>
+              <div className={styles.formGroup}>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" className={styles.formInput} required />
+              </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" className={styles.formInput} required />
-        </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" className={styles.formInput} required />
+              </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" className={styles.formInput} required />
-        </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="message">Message</label>
+                <textarea id="message" rows={5} name="email" className={styles.formInput} required />
+              </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="childsName">Childs Name</label>
-          <input type="text" id="childsName" name="childsName" className={styles.formInput} required />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label htmlFor="dob">Childs Date of Birth</label>
-          <input type="date" id="dob" name="dob" className={styles.formInput} required />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label htmlFor="startDate">Preferred Start Date (or Estimate)</label>
-          <input type="text" id="startDate" name="startDate" className={styles.formInput} required />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label htmlFor="hours">Preferred Hours for Enrolment (or Estimate)</label>
-          <div className={styles.hoursGrid}>
-            <input type="text" id="monHours" name="monHours" placeholder="Mon" className={styles.formInput} />
-            <input type="text" id="tueHours" name="tueHours" placeholder="Tue" className={styles.formInput} />
-            <input type="text" id="wedHours" name="wedHours" placeholder="Wed" className={styles.formInput} />
-            <input type="text" id="thuHours" name="thuHours" placeholder="Thu" className={styles.formInput} />
-            <input type="text" id="friHours" name="friHours" placeholder="Fri" className={styles.formInput} />
+              <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
           </div>
         </div>
-
-        <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
-          {isSubmitting ? 'Sending...' : 'Send Enquiry'}
-        </button>
-      </form>
-    </div>
-          </div>
 
         {/* Map Section */}
         <div className={styles.mapSection}>
