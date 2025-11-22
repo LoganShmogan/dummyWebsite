@@ -21,7 +21,7 @@ export default function Contact() {
     setMessage('');
 
     const serviceID = 'service_hzqpetr';
-    const templateID = 'template_5jwq11b';
+    const templateID = 'template_zpxi9vi';
     const publicKey = 'BAoNsXlnhqfcGq7F0';
 
     // Error handling for contact form
@@ -132,7 +132,7 @@ export default function Contact() {
 
               <div className={styles.formGroup}>
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows={5} name="email" className={styles.formInput} required />
+                <textarea id="message" rows={5} name="message" className={styles.formInput} required />
               </div>
 
               <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
