@@ -114,12 +114,12 @@ export default function Contact() {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="childsName">Child's Name</label>
+          <label htmlFor="childsName">Childs Name</label>
           <input type="text" id="childsName" name="childsName" className={styles.formInput} required />
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="dob">Child's Date of Birth</label>
+          <label htmlFor="dob">Childs Date of Birth</label>
           <input type="date" id="dob" name="dob" className={styles.formInput} required />
         </div>
 
@@ -140,7 +140,7 @@ export default function Contact() {
         </div>
 
         <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
-          {isSubmitting ? "Sending..." : "Send Enquiry"}
+          {isSubmitting ? 'Sending...' : 'Send Enquiry'}
         </button>
       </form>
     </div>
