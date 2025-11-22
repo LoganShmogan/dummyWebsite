@@ -140,7 +140,7 @@ export default function Contact() {
         </div>
 
         <button type="submit" disabled={isSubmitting} className={styles.submitButton}>
-          {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+          {isSubmitting ? "Sending..." : "Send Enquiry"}
         </button>
       </form>
     </div>
