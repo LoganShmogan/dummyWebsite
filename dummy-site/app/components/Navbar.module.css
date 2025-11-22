@@ -1,3 +1,6 @@
+/* ===== NAVBAR COMPONENT STYLES ===== */
+
+/* Main header container - sticky navigation */
 .header {
   position: sticky;
   top: 0;
@@ -7,14 +10,7 @@
   background-color: var(--card-color);
 }
 
-.name {
-  font-size: larger;
-}
-
-h1:hover {
-  opacity: 0.5;
-}
-
+/* Main navigation container */
 .nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,6 +21,16 @@ h1:hover {
   position: relative;
 }
 
+/* ===== LOGO STYLES ===== */
+.name {
+  font-size: larger;
+}
+
+/* Logo hover effect */
+h1:hover {
+  opacity: 0.5;
+}
+
 .logo {
   font-size: 1.75rem;
   font-weight: 700;
@@ -32,17 +38,13 @@ h1:hover {
   transition: color 0.3s ease;
 }
 
+/* ===== DESKTOP NAVIGATION ===== */
 .navLinks {
   display: none;
   gap: 2rem;
 }
 
-@media (min-width: 901px) {
-  .navLinks {
-    display: flex;
-  }
-}
-
+/* Desktop navigation links */
 .navLink {
   text-decoration: none;
   font-weight: 500;
@@ -51,6 +53,7 @@ h1:hover {
   transition: color 0.3s ease;
 }
 
+/* Animated underline effect for desktop links */
 .navLink::after {
   content: '';
   position: absolute;
@@ -66,16 +69,11 @@ h1:hover {
   width: 100%;
 }
 
+/* ===== CTA BUTTON STYLES ===== */
 .ctaContainer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-@media (max-width: 900px) {
-  .ctaContainer {
-    display: none;
-  }
 }
 
 .ctaButton {
@@ -91,7 +89,9 @@ h1:hover {
   box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
 }
 
-/* Mobile menu styles */
+/* ===== MOBILE MENU STYLES ===== */
+
+/* Mobile menu toggle button */
 .mobileMenuButton {
   display: none;
   background: none;
@@ -106,16 +106,7 @@ h1:hover {
   opacity: 0.7;
 }
 
-@media (max-width: 900px) {
-  .mobileMenuButton {
-    display: block;
-  }
-  
-  .navLinks {
-    display: none !important;
-  }
-}
-
+/* Mobile menu dropdown */
 .mobileMenu {
   position: absolute;
   top: 100%;
@@ -132,17 +123,7 @@ h1:hover {
   animation: slideDown 0.3s ease-out;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Mobile navigation links */
 .mobileNavLink {
   text-decoration: none;
   font-weight: 500;
@@ -157,9 +138,101 @@ h1:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Hide mobile menu on desktop */
+/* ===== ANIMATIONS ===== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Desktop styles (901px and up) */
 @media (min-width: 901px) {
+  /* Show desktop navigation */
+  .navLinks {
+    display: flex;
+  }
+  
+  /* Hide mobile menu on desktop */
   .mobileMenu {
     display: none !important;
+  }
+}
+
+/* Mobile styles (900px and down) */
+@media (max-width: 900px) {
+  /* Hide CTA button on mobile */
+  .ctaContainer {
+    display: none;
+  }
+  
+  /* Show mobile menu button */
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  /* Hide desktop navigation links */
+  .navLinks {
+    display: none !important;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus styles for better keyboard navigation */
+.mobileMenuButton:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+}
+
+.navLink:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 4px;
+}
+
+.mobileNavLink:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .navLink,
+  .ctaButton,
+  .mobileMenuButton,
+  .mobileNavLink {
+    transition: none;
+  }
+  
+  .navLink::after {
+    transition: none;
+  }
+  
+  .mobileMenu {
+    animation: none;
+  }
+  
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE SUPPORT ===== */
+@media (prefers-contrast: high) {
+  .navLink::after {
+    background-color: currentColor;
+    height: 3px;
+  }
+  
+  .mobileNavLink:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 2px solid currentColor;
   }
 }

@@ -1,14 +1,38 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+/* Main container for the about page */
 .container {
   min-height: 100vh;
 }
 
-/* Mission Section */
+/* ===== SECTION HEADER STYLES ===== */
+/* Reusable header component for all sections */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===== MISSION SECTION ===== */
 .missionSection {
   padding: 5rem 2rem;
   text-align: center;
   background: var(--buttercream);
 }
 
+/* Mission statement specific styling */
 .missionSection .sectionHeader p {
   font-size: 1.3rem;
   line-height: 1.8;
@@ -16,12 +40,13 @@
   margin: 0 auto;
 }
 
-/* Staff Section */
+/* ===== STAFF SECTION ===== */
 .staffSection {
   padding: 5rem 2rem;
   background: var(--background);
 }
 
+/* Staff grid layout */
 .staffGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -30,6 +55,7 @@
   margin: 0 auto;
 }
 
+/* Individual staff card */
 .staffCard {
   background: var(--card-color);
   border-radius: 12px;
@@ -40,12 +66,14 @@
   border-top: 4px solid var(--sunshine-yellow);
 }
 
+/* Staff card hover effects */
 .staffCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(61, 48, 40, 0.15);
   border-top-color: var(--sunflower-gold);
 }
 
+/* Staff information styling */
 .staffInfo h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
@@ -65,12 +93,14 @@
   opacity: 0.9;
 }
 
+/* Staff image container */
 .staffImage {
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
 }
 
+/* Circular staff headshot */
 .staffHeadshot {
   width: 120px;
   height: 120px;
@@ -80,30 +110,13 @@
   box-shadow: 0 4px 8px rgba(61, 48, 40, 0.1);
 }
 
-/* Values Section */
+/* ===== VALUES SECTION ===== */
 .valuesSection {
   padding: 5rem 2rem;
   background: var(--buttercream);
 }
 
-.sectionHeader {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.sectionHeader h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.sectionHeader p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
+/* Values grid layout */
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -112,6 +125,7 @@
   margin: 0 auto;
 }
 
+/* Individual value card */
 .valueCard {
   padding: 2rem;
   border-radius: 12px;
@@ -122,12 +136,14 @@
   background-color: var(--card-color);
 }
 
+/* Value card hover effects */
 .valueCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(61, 48, 40, 0.15);
   border-left-color: var(--sunflower-gold);
 }
 
+/* Number indicator for values (removed from JSX but keeping CSS for future use) */
 .cardNumber {
   position: absolute;
   top: -12px;
@@ -144,6 +160,7 @@
   background: var(--sunshine-yellow);
 }
 
+/* Value card typography */
 .valueCard h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
@@ -155,7 +172,10 @@
   line-height: 1.6;
 }
 
-/* CTA Section */
+/* ===== CTA SECTION ===== */
+/* Note: This section appears to be unused in the current About page
+   but kept for potential future use or other pages */
+
 .ctaSection {
   padding: 4rem 2rem;
 }
@@ -211,38 +231,45 @@
   box-shadow: 0 5px 15px rgba(61, 48, 40, 0.2);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  /* Section padding adjustments for mobile */
   .missionSection,
   .staffSection,
   .valuesSection {
     padding: 3rem 1rem;
   }
   
+  /* Mission statement font size adjustment */
   .missionSection .sectionHeader p {
     font-size: 1.1rem;
   }
   
+  /* Single column layout for mobile */
   .staffGrid,
   .valuesGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
+  /* Reduced card padding for mobile */
   .staffCard,
   .valueCard {
     padding: 1.5rem;
   }
   
+  /* Smaller headshots for mobile */
   .staffHeadshot {
     width: 100px;
     height: 100px;
   }
   
+  /* Smaller section headers for mobile */
   .sectionHeader h2 {
     font-size: 2rem;
   }
   
+  /* CTA section adjustments (if used) */
   .ctaGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -258,5 +285,35 @@
   
   .ctaCard h3 {
     font-size: 1.7rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+/* Focus styles for interactive elements */
+.staffCard:focus-within,
+.valueCard:focus-within,
+.ctaCard:focus-within {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+}
+
+.ctaButton:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support for users with motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .staffCard,
+  .valueCard,
+  .ctaCard,
+  .ctaButton {
+    transition: none;
+  }
+  
+  .staffCard:hover,
+  .valueCard:hover,
+  .ctaCard:hover {
+    transform: none;
   }
 }

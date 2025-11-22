@@ -1,9 +1,14 @@
+/* ===== FOOTER COMPONENT STYLES ===== */
+
+/* Main footer container */
 .footer {
-  margin-top: auto;
+  margin-top: auto; /* Pushes footer to bottom when content is short */
   background-color: var(--card-color);
 }
 
-/* Footer Content */
+/* ===== FOOTER CONTENT LAYOUT ===== */
+
+/* Main content grid layout */
 .footerContent {
   padding: 3rem 2rem;
   display: grid;
@@ -13,6 +18,7 @@
   margin: 0 auto;
 }
 
+/* Individual footer sections */
 .footerSection h4 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
@@ -24,6 +30,7 @@
   line-height: 1.6;
 }
 
+/* Footer navigation lists */
 .footerSection ul {
   list-style: none;
   padding: 0;
@@ -38,7 +45,16 @@
   transition: color 0.3s ease;
 }
 
-/* Footer Bottom */
+/* Link hover effects */
+.footerSection ul li a:hover,
+.footerSection ul li a:focus {
+  color: var(--coral-orange);
+  text-decoration: underline;
+}
+
+/* ===== FOOTER BOTTOM SECTION ===== */
+
+/* Copyright and legal information */
 .footerBottom {
   border-top: 1px solid var(--warm-gray);
   padding: 1.5rem 2rem;
@@ -51,17 +67,88 @@
   margin: 0 auto;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet and smaller screens */
 @media (max-width: 768px) {
   .footerContent {
     padding: 2rem 1rem;
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footerBottom {
+    padding: 1.25rem 1rem;
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
   .footerContent {
     padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+  
+  .footerSection h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footerBottom {
+    padding: 1rem;
+  }
+  
+  .footerBottom p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus styles for keyboard navigation */
+.footerSection ul li a:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .footerBottom {
+    border-top: 2px solid currentColor;
+  }
+  
+  .footerSection ul li a:hover,
+  .footerSection ul li a:focus {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .footerSection ul li a {
+    transition: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  .footer {
+    background-color: white !important;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footerSection ul li a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  
+  .footerSection ul li a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    opacity: 0.7;
   }
 }

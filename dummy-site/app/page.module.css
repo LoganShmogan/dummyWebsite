@@ -1,3 +1,71 @@
+/* ===== HOME PAGE STYLES ===== */
+
+/* ===== HERO SECTION ===== */
+
+/* Main hero section container */
+.heroSection {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 40px 100px;
+  border-radius: 15px;
+}
+
+/* Hero background image */
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Hero content container */
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Company header styling */
+.companyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.companyName {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Mission statement text */
+.missionStatement {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Hero logo for mobile */
+.heroLogo {
+  display: none; /* Hidden by default */
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== CTA CARDS SECTION ===== */
+
 .ctaSection {
   padding: 4rem 2rem;
 }
@@ -10,6 +78,7 @@
   gap: 2rem;
 }
 
+/* Individual CTA cards */
 .ctaCard {
   padding: 2.5rem;
   border-radius: 16px;
@@ -35,6 +104,7 @@
   line-height: 1.6;
 }
 
+/* CTA buttons */
 .ctaButton {
   display: inline-block;
   padding: 12px 32px;
@@ -44,89 +114,34 @@
   transition: all 0.3s ease;
   border: 2px solid transparent;
   background-color: var(--button-color);
+  color: inherit; /* Ensure text color is visible */
 }
 
 .ctaButton:hover {
-  color: var(--buttercream);
+  background-color: var(--sunflower-gold);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .ctaSection {
-    padding: 3rem 1rem;
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet and smaller screens */
+@media (max-width: 900px) {
+  /* Hero section adjustments */
+  .heroSection {
+    margin: 20px;
+    height: 40vh;
+    background: var(--buttercream);
   }
   
-  .ctaCard {
-    padding: 2rem 1.5rem;
-  }
-
-  .ctaGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .ctaSection {
-    padding: 2rem 1rem;
+  .heroBackground {
+    display: none; /* Hide banner on mobile */
   }
   
-  .ctaCard {
-    padding: 1.5rem 1rem;
+  .heroLogo {
+    display: block; /* Show logo on mobile */
   }
-}
-
-.heroSection {
-  position: relative;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin: 40px 100px;
-  border-radius: 15px;
-}
-
-.heroBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.heroContent {
-  text-align: center;
-  max-width: 800px;
-  padding: 0 20px;
-  z-index: 1;
-}
-
-.companyHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.companyName {
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.missionStatement {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: 300;
-  max-width: 600px;
-  margin: 0 auto;
-  color: white;
-}
-
-@media (max-width: 768px) {
+  
   .companyName {
     font-size: 2.5rem;
   }
@@ -139,49 +154,114 @@
     flex-direction: column;
   }
   
-}
-
-.heroSection {
-  position: relative;
-  height: 60vh; /* Adjust as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.heroLogo {
-  display: none; /* Hidden by default */
-  position: relative;
-  z-index: 2;
-}
-
-/* Mobile styles */
-@media (max-width: 900px) {
-  .heroBackground {
-    display: none; /* Hide banner on mobile */
+  /* CTA section adjustments */
+  .ctaSection {
+    padding: 3rem 1rem;
   }
   
-  .heroLogo {
-    display: block; /* Show logo on mobile */
+  .ctaCard {
+    padding: 2rem 1.5rem;
   }
   
+  .ctaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
   .heroSection {
-    height: 40vh; /* Smaller height for mobile */
-    background: var(--buttercream); /* Optional: Add background color */
+    margin: 15px;
+    height: 35vh;
+  }
+  
+  .companyName {
+    font-size: 2rem;
+  }
+  
+  .missionStatement {
+    font-size: 1.1rem;
+  }
+  
+  .ctaSection {
+    padding: 2rem 1rem;
+  }
+  
+  .ctaCard {
+    padding: 1.5rem 1rem;
   }
 }
 
-/* Desktop styles */
+/* Desktop styles (901px and up) */
 @media (min-width: 901px) {
   .heroLogo {
     display: none; /* Ensure logo is hidden on desktop */
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus styles for better keyboard navigation */
+.ctaButton:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+  background-color: var(--sunflower-gold);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .ctaCard {
+    border: 2px solid currentColor;
+  }
+  
+  .ctaButton {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ctaCard,
+  .ctaButton {
+    transition: none;
+  }
+  
+  .ctaCard:hover,
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  .heroSection {
+    margin: 0;
+    border-radius: 0;
+    height: auto;
+    background: white !important;
+  }
+  
+  .heroBackground {
+    display: none;
+  }
+  
+  .heroLogo {
+    display: block;
+  }
+  
+  .ctaSection {
+    padding: 2rem 0;
+  }
+  
+  .ctaCard {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .ctaButton {
+    background: white;
+    border: 1px solid #ccc;
+    color: black;
   }
 }

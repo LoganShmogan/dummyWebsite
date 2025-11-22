@@ -1,3 +1,23 @@
+/* ===== CONTACT PAGE STYLES ===== */
+
+/* Main content container */
+.mainArea {
+  max-width: 72rem; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Page heading */
+.contactHeading {
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  margin-bottom: 2rem; 
+}
+
+/* ===== CONTACT LAYOUT ===== */
+
+/* Two-column grid layout for contact info and form */
 .contactContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -5,23 +25,7 @@
   margin-bottom: 3rem;
 }
 
-.contactHeading {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  margin-bottom: 2rem; 
-}
-
-
-.mainArea {
-  max-width: 72rem; 
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem; 
-  padding-right: 1.5rem;
-  padding-top: 2.5rem; 
-  padding-bottom: 2.5rem;
-}
-
+/* Contact information section */
 .contactSection {
   display: flex;
   flex-direction: column;
@@ -31,17 +35,22 @@
   border-radius: 0.5rem;
 }
 
-.contactInfo h3, .contactForm h3, .mapSection h3 {
+/* Section headings */
+.contactInfo h3, 
+.contactForm h3, 
+.mapSection h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
+/* Contact information text */
 .contactInfo p {
   margin-bottom: 1.5rem;
   background-color: var(--card-color);
 }
 
+/* Contact details layout */
 .contactDetails {
   display: flex;
   flex-direction: column;
@@ -49,6 +58,7 @@
   background-color: var(--card-color);
 }
 
+/* Individual contact items */
 .contactItem h4 {
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -58,6 +68,7 @@
   margin: 0.25rem 0;
 }
 
+/* ===== BUSINESS HOURS ===== */
 .hoursInfo h4 {
   font-weight: 600;
   margin-bottom: 1rem;
@@ -73,31 +84,25 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hourItem:last-child {
+  border-bottom: none;
 }
 
 .hourItem span:first-child {
   font-weight: 500;
 }
 
-/* Contact Form Styles */
-.formInputMon, .formInputTue, .formInputWed, .formInputThu, .formInputFri{
-  margin-top: 10px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  background-color: #EDD287;
-}
-.formInputMon:focus, .formInputTue:focus, .formInputWed:focus, .formInputThu:focus, .formInputFri:focus{
-  outline: none;
-  border-color: #ea580c; /* orange-500 */
-  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
-}
-
+/* ===== CONTACT FORM ===== */
 .contactForm {
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: var(--card-color);
 }
 
+/* Form layout */
 .form {
   display: flex;
   flex-direction: column;
@@ -114,29 +119,69 @@
   margin-bottom: 0.5rem;
 }
 
-.formInput, .formTextarea {
+/* Form input fields */
+.formInput, 
+.formTextarea {
   padding: 0.75rem;
   font-size: 1rem;
   background-color: #EDD287;
+  border: 1px solid #D1B56F;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
 }
 
-.formInput:focus, .formTextarea:focus {
+.formInput:focus, 
+.formTextarea:focus {
   outline: none;
   border-color: #ea580c; /* orange-500 */
   box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
 }
 
+/* Submit button */
 .submitButton {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.375rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition: all 0.3s ease;
   background-color: var(--button-color);
 }
 
-/* Map Section */
+.submitButton:hover:not(:disabled) {
+  background-color: var(--sunflower-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 175, 46, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== SUCCESS/ERROR MESSAGES ===== */
+.messageSuccess {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+}
+
+.messageError {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+}
+
+/* ===== MAP SECTION ===== */
 .mapSection {
   padding: 3rem 2rem;
   text-align: center;
@@ -156,29 +201,22 @@
   margin: 0 auto;
 }
 
-/* Leaflet specific adjustments */
+/* Leaflet map container adjustments */
 .leaflet-container {
   border-radius: 12px;
+  height: 400px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .mapSection {
-    padding: 2rem 1rem;
-  }
-  
-  .mapContainer {
-    border-radius: 8px;
-  }
-}
+/* ===== RESPONSIVE DESIGN ===== */
 
-/* Responsive Design */
+/* Tablet and smaller screens */
 @media (max-width: 768px) {
   .contactContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
+  .contactSection,
   .contactForm {
     padding: 1.5rem;
   }
@@ -187,4 +225,85 @@
     flex-direction: column;
     gap: 0.25rem;
   }
+  
+  .mapSection {
+    padding: 2rem 1rem;
+  }
+  
+  .mapContainer {
+    border-radius: 8px;
+  }
+  
+  .mainArea {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .contactSection,
+  .contactForm {
+    padding: 1.25rem;
+  }
+  
+  .contactHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactInfo h3,
+  .contactForm h3,
+  .mapSection h3 {
+    font-size: 1.25rem;
+  }
+  
+  .mapSection h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus styles for better keyboard navigation */
+.formInput:focus,
+.formTextarea:focus,
+.submitButton:focus {
+  outline: 2px solid var(--sunflower-gold);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .formInput,
+  .formTextarea {
+    border: 2px solid currentColor;
+  }
+  
+  .hourItem {
+    border-bottom: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .formInput,
+  .formTextarea,
+  .submitButton {
+    transition: none;
+  }
+  
+  .submitButton:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* ===== FORM VALIDATION STYLES ===== */
+.formInput:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.formInput:valid:not(:focus):not(:placeholder-shown) {
+  border-color: #16a34a;
+  background-color: #f0fdf4;
 }
