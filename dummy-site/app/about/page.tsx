@@ -95,7 +95,6 @@ export default function About() {
         <div className={styles.valuesGrid}>
           {values.map((value, index) => (
             <div key={index} className={styles.valueCard}>
-              <div className={styles.cardNumber}>{index + 1}</div>
               <h3>{value.title}</h3>
               <p>{value.description}</p>
             </div>
