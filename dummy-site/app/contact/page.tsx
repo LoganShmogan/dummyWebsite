@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import styles from './page.module.css';
 import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react'

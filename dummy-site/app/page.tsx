@@ -50,6 +50,65 @@ export default function Home() {
         </div>
       </div>
 
+      {/* What We Offer Section */}
+      <section className={styles.offerSection}>
+        <div className={styles.offerContainer}>
+          <h2 className={styles.offerHeading}>What We Offer</h2>
+          <div className={styles.offerGrid}>
+            {/* Row 1 */}
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                {/* Replace with your actual icon */}
+                <div className={styles.iconPlaceholder}>🎨</div>
+              </div>
+              <h3>Creative Arts</h3>
+              <p>Engaging art activities that encourage self-expression and develop fine motor skills through painting, drawing, and crafts.</p>
+            </div>
+            
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                <div className={styles.iconPlaceholder}>📚</div>
+              </div>
+              <h3>Early Literacy</h3>
+              <p>Building foundational reading skills through storytime, phonics, and interactive language activities.</p>
+            </div>
+            
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                <div className={styles.iconPlaceholder}>🔢</div>
+              </div>
+              <h3>Math & Science</h3>
+              <p>Hands-on exploration of numbers, patterns, and scientific concepts through play-based learning.</p>
+            </div>
+
+            {/* Row 2 */}
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                <div className={styles.iconPlaceholder}>🏃‍♂️</div>
+              </div>
+              <h3>Physical Development</h3>
+              <p>Structured physical activities that promote coordination, balance, and healthy exercise habits.</p>
+            </div>
+            
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                <div className={styles.iconPlaceholder}>🎵</div>
+              </div>
+              <h3>Music & Movement</h3>
+              <p>Rhythm, dance, and musical activities that enhance auditory skills and creative expression.</p>
+            </div>
+            
+            <div className={styles.offerCard}>
+              <div className={styles.offerIcon}>
+                <div className={styles.iconPlaceholder}>🌳</div>
+              </div>
+              <h3>Outdoor Play</h3>
+              <p>Safe, supervised outdoor activities that encourage exploration and connection with nature.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Story Section */}
       <section className={styles.storySection}>
         <div className={styles.storyCard}>
