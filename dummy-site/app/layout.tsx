@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Dummy Website/Playground',
-  description: 'Built by Logan Young 16/10/2025',
+  title: 'Happy Horizons',
+  description: 'Built by Logan Young (Start)16/10/2025',
 }
 
 export default function RootLayout({
