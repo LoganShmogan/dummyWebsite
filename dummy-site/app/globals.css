@@ -61,36 +61,35 @@
   --link-hover-color: grey;
 
   --radius: 0.625rem;
-  --background: var(--tangerine-orange);  /* 60% - Main background */
 
   /* ====== Design 1 Color Board ====== */
   /* YELLOW / ORANGE / WHITE */
-  /*
-  Link
-    Link Hover
-
-  Button
-    Button hover
-
-  Card
-    Indiv Card
-      Card Hover
-        Info
-
-  MainArea Container
-    Headings
-
-  Container
-    Section
-      Heading
-        Item Layout
-          Item
-  Form
-    Form Layout
-      Form Input Field
-        button
-  */
+  /* 
+  --background: var(--tangerine-orange); 60% - Main background 
   --backDrop: #ffb800;
+  --FrontDrop: #ffcc00;
+  
+  --cardBack: #fadd8f;
+  --cardFront: #FFE2A5;
+
+  --buttonBack: #f0c051;
+  --buttonHover: #FFCD6B;
+
+  --sectionBack: #D1B977;
+  --sectionFront: #D1B98B;
+
+  --formBack: #fadd8f;
+  --formFront: #FFE2A5;
+  --formInput: white;
+  --formInputHover: grey;
+
+  --text: black; */
+
+  /* ====== Design 2 Color Board ====== */
+  /* WHITE / YELLOW / ORANGE */
+
+  --background: #FFEFC3; 
+  --backDrop: #FFEFC3;
   --FrontDrop: #ffcc00;
   
   --cardBack: #fadd8f;
@@ -110,14 +109,29 @@
   --text: black;
 
 
-  /* ====== Design 2 Color Board ====== */
-  /* WHITE / YELLOW / ORANGE */
-
-
-
   /* ====== Design 3 Color Board ====== */
   /* WHITE / GRAY / YELLOW */
 
+  /* 
+  --background: var(--tangerine-orange); 60% - Main background 
+  --backDrop: #ffb800;
+  --FrontDrop: #ffcc00;
+  
+  --cardBack: #fadd8f;
+  --cardFront: #FFE2A5;
+
+  --buttonBack: #f0c051;
+  --buttonHover: #FFCD6B;
+
+  --sectionBack: #D1B977;
+  --sectionFront: #D1B98B;
+
+  --formBack: #fadd8f;
+  --formFront: #FFE2A5;
+  --formInput: white;
+  --formInputHover: grey;
+
+  --text: black; */
 }
 
   /* Global Typography Styles */
