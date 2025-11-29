@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import styles from './Navbar.module.css';
-import { useState } from 'react'
+import { useState } from 'react';
+import { playpenSans } from '@/lib/fonts';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,11 +21,11 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" onClick={closeMobileMenu}>
-          <h1 className={styles.name}>Happy Horizons</h1>
+          <h1 className={`${styles.name} ${playpenSans.className}`}>Happy Horizons</h1>
         </Link> 
 
         {/* Desktop Navigation Links - hidden on mobile */}
-        <div className={styles.navLinks}>
+        <div className={`${styles.navLinks} ${playpenSans.className}`}>
           <Link href="/" className={styles.navLink}>Home</Link>
           <Link href="/about" className={styles.navLink}>About</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
@@ -33,7 +34,7 @@ export default function Navbar() {
         </div>
         
         {/* Desktop CTA Button - hidden on mobile */}
-        <div className={styles.ctaContainer}>
+        <div className={`${styles.ctaContainer} ${playpenSans.className}`}>
           <Link href="/enrolment"><Button className={styles.ctaButton}>Enrol Now</Button></Link>
         </div>
 
@@ -50,7 +51,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className={styles.mobileMenu}>
+        <div className={`${styles.mobileMenu} ${playpenSans.className}`}>
           <Link 
             href="/" 
             className={styles.mobileNavLink}

@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react'
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { playpenSans } from '@/lib/fonts';
 
 const MapWithNoSSR = dynamic(
   () => import('@/app/components/Map'),
@@ -61,31 +62,31 @@ export default function Contact() {
   return (
     <>
       <section className={styles.mainArea}>
-        <h2 className={styles.contactHeading}>Enrolment</h2>
+        <h2 className={`${styles.contactHeading} ${playpenSans.className}`}>Enrolment</h2>
 
         <div className={styles.contactContainer}>
           {/* Contact Information */}
           <div className={styles.contactSection}>
             <div className={styles.contactInfo}>
-              <h3>Get in Touch</h3>
+              <h3 className={`${playpenSans.className}`}>Get in Touch</h3>
               <p>For enrolements please fill out the enquiry forum</p>
               <p>We would love to hear from you! Reach out through any of the following methods:
               </p>
 
               <div className={styles.contactDetails}>
                 <div className={styles.contactItem}>
-                  <h4>Phone</h4>
+                  <h4 className={`${playpenSans.className}`}>Phone</h4>
                   <p>(06) 355 8501</p>
                   <p>(021) 196 0335</p>
                 </div>
 
                 <div className={styles.contactItem}>
-                  <h4>Email</h4>
+                  <h4 className={`${playpenSans.className}`}>Email</h4>
                   <p>admin@happyhorizons.nz</p>
                 </div>
 
                 <div className={styles.contactItem}>
-                  <h4>Address</h4>
+                  <h4 className={`${playpenSans.className}`}>Address</h4>
                   <p>28 Shamrock Street, Tākaro</p>
                   <p>Palmerston North</p>
                 </div>
@@ -94,7 +95,7 @@ export default function Contact() {
 
             {/* Business Hours */}
             <div className={styles.hoursInfo}>
-              <h4>Opening Hours</h4>
+              <h4 className={`${playpenSans.className}`}>Opening Hours</h4>
               <div className={styles.hoursList}>
                 <div className={styles.hourItem}>
                   <span>Monday - Friday</span>
@@ -114,7 +115,7 @@ export default function Contact() {
 
           {/* Enrolement Form */}
           <div className={styles.contactForm}>
-            <h3>Send us an Enquiry</h3>
+            <h3 className={`${playpenSans.className}`}>Send us an Enquiry</h3>
             {message && (
               <div className={message.includes('successfully') ? styles.messageSuccess : styles.messageError}>
                 {message}
@@ -171,7 +172,7 @@ export default function Contact() {
 
         {/* Map Section */}
         <div className={styles.mapSection}>
-          <h3>Find Us</h3>
+          <h3 className={`${playpenSans.className}`}>Find Us</h3>
           <div className={styles.mapContainer}>
             <MapWithNoSSR />
           </div>

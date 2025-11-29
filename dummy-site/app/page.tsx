@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { playpenSans } from '@/lib/fonts';
 
 export default function Home() {
   return (
@@ -38,12 +39,12 @@ export default function Home() {
       <div className={styles.ctaSection}>
         <div className={styles.ctaGrid}>
           <div className={`${styles.ctaCard} ${styles.aboutCard}`}>
-            <h3>About Us</h3>
+            <h3 className={`${playpenSans.className}`}>About Us</h3>
             <p>Learn more about our story, our team, and what makes Happy Horizons special</p>
             <Link className={styles.ctaButton} href="/about">Our Story</Link>
           </div>
           <div className={`${styles.ctaCard} ${styles.enrollCard}`}>
-            <h3>Enroll Now</h3>
+            <h3 className={`${playpenSans.className}`}>Enroll Now</h3>
             <p>Join Happy and give your child the best start in life</p>
             <Link className={styles.ctaButton} href="/enrolment">Start Enrolment</Link>
           </div>
@@ -53,7 +54,7 @@ export default function Home() {
       {/* What We Offer Section */}
       <section className={styles.offerSection}>
         <div className={styles.offerContainer}>
-          <h2 className={styles.offerHeading}>What We Offer</h2>
+          <h2 className={`${styles.offerHeading} ${playpenSans.className}`}>What We Offer</h2>
           <div className={styles.offerGrid}>
             {/* Row 1 */}
             <div className={styles.offerCard}>
@@ -61,7 +62,7 @@ export default function Home() {
                 {/* Replace with your actual icon */}
                 <div className={styles.iconPlaceholder}>🎨</div>
               </div>
-              <h3>Creative Arts</h3>
+              <h3 className={`${playpenSans.className}`}>Creative Arts</h3>
               <p>Engaging art activities that encourage self-expression and develop fine motor skills through painting, drawing, and crafts.</p>
             </div>
             
@@ -69,7 +70,7 @@ export default function Home() {
               <div className={styles.offerIcon}>
                 <div className={styles.iconPlaceholder}>📚</div>
               </div>
-              <h3>Early Literacy</h3>
+              <h3 className={`${playpenSans.className}`}>Early Literacy</h3>
               <p>Building foundational reading skills through storytime, phonics, and interactive language activities.</p>
             </div>
             
@@ -77,7 +78,7 @@ export default function Home() {
               <div className={styles.offerIcon}>
                 <div className={styles.iconPlaceholder}>🔢</div>
               </div>
-              <h3>Math & Science</h3>
+              <h3 className={`${playpenSans.className}`}>Math & Science</h3>
               <p>Hands-on exploration of numbers, patterns, and scientific concepts through play-based learning.</p>
             </div>
 
@@ -86,7 +87,7 @@ export default function Home() {
               <div className={styles.offerIcon}>
                 <div className={styles.iconPlaceholder}>🏃‍♂️</div>
               </div>
-              <h3>Physical Development</h3>
+              <h3 className={`${playpenSans.className}`}>Physical Development</h3>
               <p>Structured physical activities that promote coordination, balance, and healthy exercise habits.</p>
             </div>
             
@@ -94,7 +95,7 @@ export default function Home() {
               <div className={styles.offerIcon}>
                 <div className={styles.iconPlaceholder}>🎵</div>
               </div>
-              <h3>Music & Movement</h3>
+              <h3 className={`${playpenSans.className}`}>Music & Movement</h3>
               <p>Rhythm, dance, and musical activities that enhance auditory skills and creative expression.</p>
             </div>
             
@@ -102,7 +103,7 @@ export default function Home() {
               <div className={styles.offerIcon}>
                 <div className={styles.iconPlaceholder}>🌳</div>
               </div>
-              <h3>Outdoor Play</h3>
+              <h3 className={`${playpenSans.className}`}>Outdoor Play</h3>
               <p>Safe, supervised outdoor activities that encourage exploration and connection with nature.</p>
             </div>
           </div>
@@ -125,7 +126,7 @@ export default function Home() {
             />
           </div>
           <div className={styles.storyContent}>
-            <h2>Our Story</h2>
+            <h2 className={`${playpenSans.className}`}>Our Story</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -147,7 +148,7 @@ export default function Home() {
       <section className={styles.staffSection}>
         <div className={`${styles.staffCard} ${styles.reverseLayout}`}>
           <div className={styles.staffContent}>
-            <h2>Our Staff</h2>
+            <h2 className={`${playpenSans.className}`}>Our Family</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 

@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import Image from 'next/image';
+import { playpenSans } from '@/lib/fonts';
 
 export default function About() {
   const values = [
@@ -53,7 +54,7 @@ export default function About() {
       {/* Mission Section */}
       <section className={styles.missionSection}>
         <div className={styles.sectionHeader}>
-          <h2>Our Mission</h2>
+          <h2 className={`${playpenSans.className}`}>Our Mission</h2>
           <p>The mission of Happy Horizons is to foster a love of learning and a sense of wonder in every child. We provide a caring, engaging, and inclusive space that encourages curiosity, creativity, and confidence, helping each child grow toward bright and limitless horizons.</p>
         </div>
       </section>
@@ -61,7 +62,7 @@ export default function About() {
       {/* Staff Section */}
       <section className={styles.staffSection}>
         <div className={styles.sectionHeader}>
-          <h2>Our Team</h2>
+          <h2 className={`${playpenSans.className}`}>Our Team</h2>
           <p>Meet the passionate professionals behind Happy Horizons</p>
         </div>
         <div className={styles.staffGrid}>
@@ -89,7 +90,7 @@ export default function About() {
       {/* Values Section */}
       <section className={styles.valuesSection}>
         <div className={styles.sectionHeader}>
-          <h2>Our Values</h2>
+          <h2 className={`${playpenSans.className}`}>Our Values</h2>
           <p>The principles that guide everything we do at Happy Horizons</p>
         </div>
         <div className={styles.valuesGrid}>
