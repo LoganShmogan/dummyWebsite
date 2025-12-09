@@ -43,14 +43,14 @@
 
 :root {
   /* Custom Colors */
-  --big-yellow: #F2CB56;
+  --big-yellow: #f2cb56;
   /* 60% - Primary color */
   --big-orange: #f29422;
   /* 30% - Secondary color */
   --tangerine-orange: #ffb800;
 
-  --button-color: #F0C051;
-  --card-color: #FADD8F;
+  --button-color: #f0c051;
+  --card-color: #fadd8f;
   /* Typography Colors */
   --heading-color: black;
   /* Color for all headings (h1, h2, h3, h4, h5, h6) */
@@ -64,11 +64,11 @@
 
   /* ====== Design 1 Color Board ====== */
   /* YELLOW / ORANGE / WHITE */
-  /* 
-  --background: var(--tangerine-orange); 60% - Main background 
+  /*
+  --background: var(--tangerine-orange); 60% - Main background
   --backDrop: #ffb800;
   --FrontDrop: #ffcc00;
-  
+
   --cardBack: #fadd8f;
   --cardFront: #FFE2A5;
 
@@ -88,35 +88,34 @@
   /* ====== Design 2 Color Board ====== */
   /* WHITE / YELLOW / ORANGE */
 
-  --background: #FFEFC3; 
-  --backDrop: #FFEFC3;
+  --background: #ffb800;
+  --backDrop: #ffb800;
   --FrontDrop: #ffcc00;
-  
+
   --cardBack: #fadd8f;
-  --cardFront: #FFE2A5;
+  --cardFront: #ffe2a5;
 
   --buttonBack: #f0c051;
-  --buttonHover: #FFCD6B;
+  --buttonHover: #ffcd6b;
 
-  --sectionBack: #D1B977;
-  --sectionFront: #D1B98B;
+  --sectionBack: #d1b977;
+  --sectionFront: #d1b98b;
 
   --formBack: #fadd8f;
-  --formFront: #FFE2A5;
+  --formFront: #ffe2a5;
   --formInput: white;
   --formInputHover: grey;
 
   --text: black;
 
-
   /* ====== Design 3 Color Board ====== */
   /* WHITE / GRAY / YELLOW */
 
-  /* 
-  --background: var(--tangerine-orange); 60% - Main background 
+  /*
+  --background: var(--tangerine-orange); 60% - Main background
   --backDrop: #ffb800;
   --FrontDrop: #ffcc00;
-  
+
   --cardBack: #fadd8f;
   --cardFront: #FFE2A5;
 
@@ -134,13 +133,15 @@
   --text: black; */
 }
 
-  /* Global Typography Styles */
-h1, h2, h3, h4, h5, h6 {
+/* Global Typography Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text);
 }
-
-
-
 
 @layer base {
   * {
