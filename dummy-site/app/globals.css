@@ -51,42 +51,8 @@
 
   --button-color: #f0c051;
   --card-color: #fadd8f;
-  /* Typography Colors */
-  --heading-color: black;
-  /* Color for all headings (h1, h2, h3, h4, h5, h6) */
-  --text-color: black;
-  /* Color for all body text (p, li, span, etc) */
-  --link-color: black;
-  /* Color for links */
-  --link-hover-color: grey;
 
   --radius: 0.625rem;
-
-  /* ====== Design 1 Color Board ====== */
-  /* YELLOW / ORANGE / WHITE */
-  /*
-  --background: var(--tangerine-orange); 60% - Main background
-  --backDrop: #ffb800;
-  --FrontDrop: #ffcc00;
-
-  --cardBack: #fadd8f;
-  --cardFront: #FFE2A5;
-
-  --buttonBack: #f0c051;
-  --buttonHover: #FFCD6B;
-
-  --sectionBack: #D1B977;
-  --sectionFront: #D1B98B;
-
-  --formBack: #fadd8f;
-  --formFront: #FFE2A5;
-  --formInput: white;
-  --formInputHover: grey;
-
-  --text: black; */
-
-  /* ====== Design 2 Color Board ====== */
-  /* WHITE / YELLOW / ORANGE */
 
   --background: #ffb800;
   --backDrop: #ffb800;
@@ -106,31 +72,16 @@
   --formInput: white;
   --formInputHover: grey;
 
+  /* Typography Colors */
   --text: black;
-
-  /* ====== Design 3 Color Board ====== */
-  /* WHITE / GRAY / YELLOW */
-
-  /*
-  --background: var(--tangerine-orange); 60% - Main background
-  --backDrop: #ffb800;
-  --FrontDrop: #ffcc00;
-
-  --cardBack: #fadd8f;
-  --cardFront: #FFE2A5;
-
-  --buttonBack: #f0c051;
-  --buttonHover: #FFCD6B;
-
-  --sectionBack: #D1B977;
-  --sectionFront: #D1B98B;
-
-  --formBack: #fadd8f;
-  --formFront: #FFE2A5;
-  --formInput: white;
-  --formInputHover: grey;
-
-  --text: black; */
+  --header-text: darkorange;
+  --heading-color: black;
+  /* Color for all headings (h1, h2, h3, h4, h5, h6) */
+  --text-color: black;
+  /* Color for all body text (p, li, span, etc) */
+  --link-color: black;
+  /* Color for links */
+  --link-hover-color: grey;
 }
 
 /* Global Typography Styles */
@@ -141,6 +92,9 @@ h4,
 h5,
 h6 {
   color: var(--text);
+  font-family: cooper-black-std, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @layer base {

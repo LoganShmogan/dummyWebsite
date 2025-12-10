@@ -22,15 +22,16 @@
 
 /* ===== LOGO STYLES ===== */
 .name {
-  font-size: 1.75rem; 
-  font-weight: 600; 
-  color: var(--text-primary); 
-  letter-spacing: -0.02em; 
-  line-height: 1.1; 
-  text-transform: uppercase; 
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   margin: 0;
+  color: darkorange;
 }
+
 /* Logo hover effect */
 h1:hover {
   opacity: 0.5;
@@ -60,7 +61,7 @@ h1:hover {
 
 /* Animated underline effect for desktop links */
 .navLink::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -163,7 +164,7 @@ h1:hover {
   .navLinks {
     display: flex;
   }
-  
+
   /* Hide mobile menu on desktop */
   .mobileMenu {
     display: none !important;
@@ -176,12 +177,12 @@ h1:hover {
   .ctaContainer {
     display: none;
   }
-  
+
   /* Show mobile menu button */
   .mobileMenuButton {
     display: block;
   }
-  
+
   /* Hide desktop navigation links */
   .navLinks {
     display: none !important;
@@ -215,15 +216,15 @@ h1:hover {
   .mobileNavLink {
     transition: none;
   }
-  
+
   .navLink::after {
     transition: none;
   }
-  
+
   .mobileMenu {
     animation: none;
   }
-  
+
   .ctaButton:hover {
     transform: none;
   }
@@ -235,7 +236,7 @@ h1:hover {
     background-color: currentColor;
     height: 3px;
   }
-  
+
   .mobileNavLink:hover {
     background-color: rgba(0, 0, 0, 0.1);
     outline: 2px solid currentColor;

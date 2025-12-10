@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import styles from './Navbar.module.css';
-import { useState } from 'react';
-import { playpenSans } from '@/lib/fonts';
+import styles from "./Navbar.module.css";
+import { useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,25 +20,37 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" onClick={closeMobileMenu}>
-          <h1 className={`${styles.name} ${playpenSans.className}`}>Happy Horizons</h1>
-        </Link> 
+          <h1 className={`${styles.name}`}>Happy Horizons</h1>
+        </Link>
 
         {/* Desktop Navigation Links - hidden on mobile */}
-        <div className={`${styles.navLinks} ${playpenSans.className}`}>
-          <Link href="/" className={styles.navLink}>Home</Link>
-          <Link href="/about" className={styles.navLink}>About</Link>
-          <Link href="/contact" className={styles.navLink}>Contact</Link>
-          <Link href="/enrolment" className={styles.navLink}>Enrolment</Link>
-          <Link href="/gallery" className={styles.navLink}>Gallery</Link>
+        <div className={`${styles.navLinks}`}>
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
+          <Link href="/about" className={styles.navLink}>
+            About
+          </Link>
+          <Link href="/contact" className={styles.navLink}>
+            Contact
+          </Link>
+          <Link href="/enrolment" className={styles.navLink}>
+            Enrolment
+          </Link>
+          <Link href="/gallery" className={styles.navLink}>
+            Gallery
+          </Link>
         </div>
-        
+
         {/* Desktop CTA Button - hidden on mobile */}
-        <div className={`${styles.ctaContainer} ${playpenSans.className}`}>
-          <Link href="/enrolment"><Button className={styles.ctaButton}>Enrol Now</Button></Link>
+        <div className={`${styles.ctaContainer}`}>
+          <Link href="/enrolment">
+            <Button className={styles.ctaButton}>Enrol Now</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className={styles.mobileMenuButton}
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
@@ -51,37 +62,37 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className={`${styles.mobileMenu} ${playpenSans.className}`}>
-          <Link 
-            href="/" 
+        <div className={`${styles.mobileMenu}`}>
+          <Link
+            href="/"
             className={styles.mobileNavLink}
             onClick={closeMobileMenu}
           >
             Home
           </Link>
-          <Link 
-            href="/about" 
+          <Link
+            href="/about"
             className={styles.mobileNavLink}
             onClick={closeMobileMenu}
           >
             About
           </Link>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className={styles.mobileNavLink}
             onClick={closeMobileMenu}
           >
             Contact
           </Link>
-          <Link 
-            href="/enrolment" 
+          <Link
+            href="/enrolment"
             className={styles.mobileNavLink}
             onClick={closeMobileMenu}
           >
             Enrolment
           </Link>
-          <Link 
-            href="/gallery" 
+          <Link
+            href="/gallery"
             className={styles.mobileNavLink}
             onClick={closeMobileMenu}
           >
