@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import "./globals.css";
 
 export default function Home() {
   return (
@@ -153,56 +152,22 @@ export default function Home() {
           <div className={styles.storyContent}>
             <h2 className={``}>Our Story</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Every business has a beginning, but ours started with something
+              deeper: a desire to create meaningful impact. Before starting
+              Happy Horizons, I spent many years working in the financial
+              services world. It was a career built on numbers, systems, and
+              strategic decision-making — skills that served me well but left me
+              searching for something more fulfilling.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              I had always planned to leave the corporate world and run my own
+              business and had been discussing the ECE industry with my cousin
+              Bernadette who has been in this industry for quite some time and
+              that was the spark led me to early childhood education.
             </p>
             <Link href="/about" className={styles.storyButton}>
               Learn More About Us
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Staff Section */}
-      <section className={styles.staffSection}>
-        <div className={`${styles.staffCard} ${styles.reverseLayout}`}>
-          <div className={styles.staffContent}>
-            <h2 className={``}>Our Family</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-            <Link href="/about" className={styles.staffButton}>
-              Meet Our Team
-            </Link>
-          </div>
-          <div className={styles.staffImage}>
-            <Image
-              src="/companyLogo.jpg"
-              alt="Happy Horizons Staff"
-              width={400}
-              height={300}
-              style={{
-                objectFit: "cover",
-                borderRadius: "12px",
-              }}
-            />
           </div>
         </div>
       </section>
